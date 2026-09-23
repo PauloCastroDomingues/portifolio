@@ -23,7 +23,7 @@ export const motionConfig = {
   devices: {
     desktopMin: 1081,
     pointerMin: 900,
-    pinMinHeight: 680,
+    pinMinHeight: 760,
   },
   lenis: {
     lerp: 0.085,

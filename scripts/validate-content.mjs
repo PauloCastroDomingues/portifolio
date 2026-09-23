@@ -9,11 +9,17 @@ const required = [
   ["identity.name", content.identity?.name],
   ["hero.titleLineOne", content.hero?.titleLineOne],
   ["hero.titleLineTwo", content.hero?.titleLineTwo],
+  ["story.steps", content.story?.steps?.length],
   ["projects", content.projects?.length],
   ["contact.primaryHref", content.contact?.primaryHref],
 ];
 
 const missing = required.filter(([, value]) => !value).map(([field]) => field);
+const invalidStorySteps = (content.story?.steps ?? []).flatMap((step, index) =>
+  ["title", "code", "label", "metric", "description", "result"].flatMap((field) =>
+    step[field] ? [] : [`story.steps[${index}].${field}`],
+  ).concat(step.signals?.length ? [] : [`story.steps[${index}].signals`]),
+);
 const media = [
   content.site?.ogImage,
   content.hero?.media,
@@ -28,8 +34,9 @@ const missingMedia = [...new Set(media)].filter(
   (path) => !existsSync(resolve("public", path)),
 );
 
-if (missing.length || missingMedia.length) {
+if (missing.length || missingMedia.length || invalidStorySteps.length) {
   if (missing.length) console.error(`Campos obrigatórios ausentes: ${missing.join(", ")}`);
+  if (invalidStorySteps.length) console.error(`Campos dos estágios ausentes: ${invalidStorySteps.join(", ")}`);
   if (missingMedia.length) console.error(`Arquivos de mídia ausentes: ${missingMedia.join(", ")}`);
   process.exit(1);
 }

@@ -11,6 +11,19 @@ links, métricas e informações que aparecem no `<head>` da página. O build va
 os campos essenciais e interrompe a publicação se alguma imagem referenciada não
 existir.
 
+## Etapas do foguete
+
+Os textos animados ao lado do blueprint ficam em `story.steps`. Cada etapa possui:
+
+- `title`: nome curto exibido na navegação e no painel.
+- `code`: código técnico mostrado no blueprint e no texto animado.
+- `label`: resumo do papel daquela etapa.
+- `description`: explicação principal do que acontece.
+- `signals`: três sinais ou entregas curtas.
+- `result`: resultado esperado ao concluir a etapa.
+
+Você pode alterar esses textos sem editar componentes ou parâmetros de animação.
+
 ## Fotografias
 
 As imagens ficam em `public/media/`. Para trocar uma foto sem tocar no código,

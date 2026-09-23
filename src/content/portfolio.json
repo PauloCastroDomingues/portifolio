@@ -56,22 +56,31 @@
         "id": "preparar",
         "title": "Preparar",
         "code": "IGNITION CHECK",
+        "label": "Pergunta, fonte e regra",
         "metric": "FONTES / REGRAS / CONTEXTO",
-        "description": "Validar a pergunta, as fontes e as regras antes de acionar qualquer análise."
+        "description": "Validar a pergunta, as fontes e as regras antes de acionar qualquer análise.",
+        "signals": ["Objetivo definido", "Fonte confiável", "Critério explícito"],
+        "result": "Uma base confiável, com escopo e critérios claros para começar."
       },
       {
         "id": "acelerar",
         "title": "Acelerar",
         "code": "ASCENT / SIGNAL",
+        "label": "Conexão dos sinais",
         "metric": "PERFORMANCE / PRODUTO / OPERAÇÃO",
-        "description": "Conectar sinais de performance, produto e operação para ganhar altitude com direção."
+        "description": "Conectar sinais de performance, produto e operação para ganhar altitude com direção.",
+        "signals": ["Evolução", "Comportamento", "Contexto operacional"],
+        "result": "Uma leitura integrada que mostra o que mudou, por quê e onde agir."
       },
       {
         "id": "orbita",
         "title": "Entrar em órbita",
         "code": "ORBIT / DECISION",
+        "label": "Decisão e aprendizado",
         "metric": "CLAREZA / AÇÃO / APRENDIZADO",
-        "description": "Transformar a trajetória em uma decisão clara, acionável e pronta para evoluir."
+        "description": "Transformar a trajetória em uma decisão clara, acionável e pronta para evoluir.",
+        "signals": ["Prioridade", "Próxima ação", "Ciclo de aprendizado"],
+        "result": "Uma decisão que pode ser executada, medida e aprimorada."
       }
     ]
   },

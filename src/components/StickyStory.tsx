@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import { ChevronRight } from "lucide-react";
 import { gsap } from "gsap";
 import { RocketLaunchDiagram } from "./RocketLaunchDiagram";
 import { content, storySteps } from "../data/content";
@@ -39,6 +38,29 @@ export function StickyStory() {
 
   useGSAP(
     () => {
+      if (!root.current || scrollDriven) return;
+      const panels = gsap.utils.toArray<HTMLElement>(".story-stage-panel", root.current);
+      const current = panels[active];
+      const duration = enabled ? 0.62 : 0;
+
+      gsap.to(panels.filter((panel) => panel !== current), {
+        autoAlpha: 0,
+        y: -18,
+        duration: enabled ? 0.24 : 0,
+        ease: "power2.in",
+        overwrite: true,
+      });
+      gsap.fromTo(
+        current,
+        { autoAlpha: 0, y: 24 },
+        { autoAlpha: 1, y: 0, duration, ease: "power3.out", overwrite: true },
+      );
+    },
+    { scope: root, dependencies: [active, enabled, scrollDriven], revertOnUpdate: false },
+  );
+
+  useGSAP(
+    () => {
       if (!enabled || !root.current) return;
 
       const media = gsap.matchMedia();
@@ -46,6 +68,9 @@ export function StickyStory() {
         `(min-width: ${motionConfig.devices.desktopMin}px) and (min-height: ${motionConfig.devices.pinMinHeight}px)`,
         () => {
           setLaunchState(root.current, 0);
+          const panels = gsap.utils.toArray<HTMLElement>(".story-stage-panel", root.current);
+          gsap.set(panels, { autoAlpha: 0, y: 20 });
+          gsap.set(panels[0], { autoAlpha: 1, y: 0 });
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: root.current,
@@ -73,6 +98,11 @@ export function StickyStory() {
 
           addLaunchState(tl, root.current, 1, 0.04, 0.42);
           addLaunchState(tl, root.current, 2, 0.52, 0.46);
+
+          tl.to(panels[0], { autoAlpha: 0, y: -20, duration: 0.07, ease: "power2.in" }, 0.27)
+            .to(panels[1], { autoAlpha: 1, y: 0, duration: 0.11, ease: "power3.out" }, 0.31)
+            .to(panels[1], { autoAlpha: 0, y: -20, duration: 0.07, ease: "power2.in" }, 0.6)
+            .to(panels[2], { autoAlpha: 1, y: 0, duration: 0.11, ease: "power3.out" }, 0.64);
         },
       );
 
@@ -102,23 +132,59 @@ export function StickyStory() {
             </span>
           </div>
 
-          <ol className="story-steps" aria-label="Estágios do lançamento">
-            {storySteps.map((step, index) => (
-              <li className={active === index ? "is-active" : ""} key={step.id}>
+          <div className="story-narrative">
+            <div className="story-stage-tabs" role="tablist" aria-label="Estágios do lançamento">
+              {storySteps.map((step, index) => (
                 <button
                   type="button"
-                  aria-pressed={active === index}
+                  role="tab"
+                  id={`story-tab-${step.id}`}
+                  aria-controls={`story-panel-${step.id}`}
+                  aria-selected={active === index}
+                  className={active === index ? "is-active" : ""}
                   onClick={() => activate(index)}
+                  key={step.id}
                 >
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <strong>{step.title}</strong>
-                  <p>{step.description}</p>
-                  <ChevronRight aria-hidden="true" size={18} />
                 </button>
-                <i aria-hidden="true" />
-              </li>
-            ))}
-          </ol>
+              ))}
+            </div>
+
+            <div className="story-stage-viewport" aria-live="polite">
+              {storySteps.map((step, index) => (
+                <article
+                  className={`story-stage-panel story-stage-panel-${index}`}
+                  id={`story-panel-${step.id}`}
+                  role="tabpanel"
+                  aria-labelledby={`story-tab-${step.id}`}
+                  aria-hidden={active !== index}
+                  data-stage={index}
+                  key={step.id}
+                >
+                  <div className="story-stage-status">
+                    <i aria-hidden="true" />
+                    <span>{step.code}</span>
+                    <small>ETAPA {String(index + 1).padStart(2, "0")}</small>
+                  </div>
+                  <p className="story-stage-label">{step.label}</p>
+                  <h3>{step.title}</h3>
+                  <p className="story-stage-description">{step.description}</p>
+                  <ul className="story-stage-signals" aria-label="Sinais desta etapa">
+                    {step.signals.map((signal) => <li key={signal}>{signal}</li>)}
+                  </ul>
+                  <div className="story-stage-result">
+                    <span>RESULTADO</span>
+                    <strong>{step.result}</strong>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="story-stage-progress" aria-hidden="true">
+              <i style={{ transform: `scaleX(${(active + 1) / storySteps.length})` }} />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ alterar o componente.
 - `?debug=1` mostra controles para animações, parallax e loops.
 - O Lenis usa o ticker do GSAP como controlador único de `requestAnimationFrame`.
 - ScrollTrigger anima filhos dos elementos fixados e usa `matchMedia` para não
-  criar pin abaixo de `1081px` ou em telas baixas.
+  criar pin abaixo de `1081px` ou `760px` de altura.
 - Imagens revelam por cortina e escala antes de iniciar o deslocamento de parallax.
 - O painel de métricas usa `clip-path`; nenhuma largura do layout é recalculada.
 - No desktop, o foguete blueprint percorre uma timeline contínua ligada ao scroll:
