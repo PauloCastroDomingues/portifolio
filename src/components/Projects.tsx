@@ -1,47 +1,29 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
-import { projects } from "../data/content";
+import { content, projects } from "../data/content";
 import { useMotion } from "../motion/useMotion";
+import { ParallaxImage } from "./ParallaxImage";
 
 export function Projects() {
   const root = useRef<HTMLElement>(null);
-  const [open, setOpen] = useState<number | null>(0);
   const { settings, reducedMotion } = useMotion();
 
   useGSAP(
     () => {
-      if (!settings.animations || reducedMotion) {
-        return;
-      }
+      if (!settings.animations || reducedMotion) return;
+
       gsap.fromTo(
         ".project-card",
-        { y: 80, autoAlpha: 0 },
+        { y: 96, autoAlpha: 0 },
         {
           y: 0,
           autoAlpha: 1,
-          duration: 0.9,
-          stagger: 0.12,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: root.current,
-            start: "top 72%",
-          },
-        },
-      );
-      gsap.fromTo(
-        ".project-card img",
-        { scale: 1.16, clipPath: "inset(18% 0 0 0)" },
-        {
-          scale: 1,
-          clipPath: "inset(0% 0 0 0)",
           duration: 1,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: root.current,
-            start: "top 72%",
-          },
+          stagger: 0.14,
+          ease: "power4.out",
+          scrollTrigger: { trigger: root.current, start: "top 72%" },
         },
       );
     },
@@ -51,34 +33,38 @@ export function Projects() {
   return (
     <section className="projects section" id="projetos" ref={root}>
       <div className="container">
-        <div className="section-heading">
-          <p className="section-kicker">Projetos demonstrativos</p>
-          <h2>Composicoes ficticias para testar comportamento visual.</h2>
+        <div className="section-heading projects-heading">
+          <div>
+            <p className="section-kicker">{content.projectsSection.eyebrow}</p>
+            <h2>{content.projectsSection.title}</h2>
+          </div>
+          <span>{String(projects.length).padStart(2, "0")} CASES</span>
         </div>
         <div className="project-grid">
           {projects.map((project, index) => (
             <article className="project-card" key={project.title}>
-              <div className="project-image">
-                <img src={project.image} alt={project.alt} loading="lazy" />
-              </div>
+              <a href={project.href} target="_blank" rel="noreferrer" aria-label={`${project.cta}: ${project.title}`}>
+                <ParallaxImage
+                  className="project-image"
+                  src={project.image}
+                  alt={project.alt}
+                  intensity={index % 2 === 0 ? 0.75 : 1}
+                />
+              </a>
               <div className="project-body">
-                <p>{project.category}</p>
-                <h3>{project.title}</h3>
-                <button
-                  type="button"
-                  aria-expanded={open === index}
-                  aria-controls={`project-detail-${index}`}
-                  onClick={() => setOpen((value) => (value === index ? null : index))}
-                >
-                  Ver detalhe <span aria-hidden="true">→</span>
-                </button>
-                <div
-                  className="project-detail"
-                  id={`project-detail-${index}`}
-                  hidden={open !== index}
-                >
-                  {project.detail}
+                <div className="project-meta">
+                  <p>{project.category}</p>
+                  <span>0{index + 1}</span>
                 </div>
+                <h3>{project.title}</h3>
+                <p className="project-summary">{project.summary}</p>
+                <ul className="project-tags" aria-label="Tecnologias e temas">
+                  {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                </ul>
+                <a className="project-link" href={project.href} target="_blank" rel="noreferrer">
+                  {project.cta}
+                  <ArrowUpRight aria-hidden="true" size={19} />
+                </a>
               </div>
             </article>
           ))}

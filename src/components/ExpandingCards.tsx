@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { serviceCards } from "../data/content";
+import { ArrowDownRight, Pause, Play } from "lucide-react";
+import { content, serviceCards } from "../data/content";
 import { useMotion } from "../motion/useMotion";
 
 export function ExpandingCards() {
@@ -17,30 +18,23 @@ export function ExpandingCards() {
       ([entry]) => setVisible(Boolean(entry?.isIntersecting)),
       { threshold: 0.35 },
     );
-    if (root.current) {
-      observer.observe(root.current);
-    }
+    if (root.current) observer.observe(root.current);
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (!shouldRun) {
-      return;
-    }
+    if (!shouldRun) return;
     const timer = window.setInterval(
       () => setActive((value) => (value + 1) % serviceCards.length),
-      5000,
+      5200,
     );
     return () => window.clearInterval(timer);
   }, [shouldRun]);
 
   useEffect(() => {
     const onVisibility = () => {
-      if (document.hidden) {
-        setPaused(true);
-      } else if (!userPaused.current) {
-        setPaused(false);
-      }
+      if (document.hidden) setPaused(true);
+      else if (!userPaused.current) setPaused(false);
     };
     document.addEventListener("visibilitychange", onVisibility);
     return () => document.removeEventListener("visibilitychange", onVisibility);
@@ -57,17 +51,18 @@ export function ExpandingCards() {
       ref={root}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => {
-        if (!userPaused.current) {
-          setPaused(false);
-        }
+        if (!userPaused.current) setPaused(false);
       }}
     >
       <div className="container">
         <div className="section-heading">
-          <p className="section-kicker">Competencias ficticias</p>
-          <h2>Quatro cards redistribuem espaco conforme a escolha.</h2>
-          <button className="text-button" type="button" onClick={togglePause}>
-            {paused ? "Retomar alternancia" : "Pausar alternancia"}
+          <div>
+            <p className="section-kicker">{content.capabilities.eyebrow}</p>
+            <h2>{content.capabilities.title}</h2>
+          </div>
+          <button className="icon-text-button" type="button" onClick={togglePause}>
+            {paused ? <Play aria-hidden="true" size={16} /> : <Pause aria-hidden="true" size={16} />}
+            {paused ? "Retomar" : "Pausar"}
           </button>
         </div>
         <div className="expanding-cards" role="list">
@@ -84,9 +79,12 @@ export function ExpandingCards() {
               >
                 <span>{card.kicker}</span>
                 <strong>{card.title}</strong>
+                <ArrowDownRight aria-hidden="true" size={20} />
               </button>
               <div className="card-reveal" aria-hidden={active !== index}>
-                <img src={card.image} alt="" loading="lazy" />
+                <div className="card-image">
+                  <img src={card.image} alt="" loading="lazy" />
+                </div>
                 <p>{card.description}</p>
                 {active === index && shouldRun ? (
                   <span className="card-progress" key={index} aria-hidden="true" />

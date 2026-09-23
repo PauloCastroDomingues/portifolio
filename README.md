@@ -1,80 +1,93 @@
-# STUDIO 01 · Landing Motion Demo
+# Portfólio · Paulo Castro Domingues
 
-Landing page demonstrativa criada para o repositorio `portifolio`, com conteudo ficticio em portugues brasileiro e foco em movimento editorial, parallax, narrativa fixa e controles de teste.
+Portfólio profissional voltado a performance, dados e produto. A experiência
+combina narrativa editorial, projetos reais, parallax, seções guiadas por
+rolagem e uma estrutura de conteúdo simples de atualizar.
 
-## Stack
+## Conteúdo e imagens
 
-- React + TypeScript + Vite.
-- GSAP com ScrollTrigger e `@gsap/react`.
-- Lenis para suavizacao discreta no desktop.
-- CSS proprio com variaveis centralizadas de cor e parametros de movimento em `src/motion/config.ts`.
+Os textos, links, projetos e metadados do `<head>` ficam centralizados em:
 
-## Rodar localmente
+```text
+src/content/portfolio.json
+```
+
+As fotografias ficam em:
+
+```text
+public/media/
+```
+
+Para trocar uma imagem, substitua o arquivo mantendo o nome. Para adicionar um
+projeto ou alterar nomes de arquivos, consulte [`CONTENT.md`](CONTENT.md).
+
+## Desenvolvimento
 
 ```bash
 npm ci
 npm run dev
 ```
 
-URL local padrao:
+URL local:
 
 ```text
 http://127.0.0.1:5173/portifolio/
 ```
 
-Modo de teste:
+Modo de diagnóstico:
 
 ```text
 http://127.0.0.1:5173/portifolio/?debug=1
 ```
 
-## Scripts
+## Verificação
 
 ```bash
+npm run content:check
 npm run typecheck
 npm run lint
 npm run build
-npm run preview
 ```
 
-## Mapa da demo
+O `content:check` valida os campos essenciais e confirma que todas as mídias
+referenciadas existem antes do build.
 
-- Abertura: titulo que se reorganiza na rolagem, escultura abstrata azul, camadas com profundidade e resposta discreta ao ponteiro.
-- Faixa e depoimentos: marquee tipografico pausavel e carrossel manual com transicao.
-- Experiencia: secao fixa em desktop com tres etapas, diagrama SVG original e animacao ambiente.
-- Fotografias: dois blocos com parallax real por imagem interna em moldura recortada.
-- Cards: quatro cards expansivos com autoplay pausavel no desktop e acordeao vertical no mobile.
-- Projetos: tres projetos ficticios com detalhe acessivel dentro da pagina.
-- Painel 120: fundo azul expansivo que reorganiza numero e informacoes na rolagem.
-- Fechamento: painel claro com recuos laterais revelando o rodape azul profundo.
+## Stack
 
-## Publicacao no GitHub Pages
+- React, TypeScript e Vite.
+- GSAP, ScrollTrigger e `@gsap/react`.
+- Lenis para suavização de rolagem no desktop.
+- Lucide para ícones de interface.
+- CSS próprio com comportamento responsivo e suporte a movimento reduzido.
 
-O Vite esta configurado com:
+## Movimento
 
-```ts
-base: "/portifolio/"
-```
+- Hero com entrada por máscara, fotografia sobreposta e reorganização do título.
+- Marquee pausável e princípios navegáveis manualmente.
+- Narrativa fixa em desktop com três estados e diagrama reativo.
+- Fotografias com cortina, escala e parallax interno independentes.
+- Cards expansivos pausáveis e layout vertical no mobile.
+- Cases com revelação progressiva e parallax individual.
+- Painel de métricas aberto por `clip-path`, sem animar largura do layout.
+- Fechamento revelado conforme a rolagem.
 
-Os workflows incluidos fazem:
+Os parâmetros estão documentados em [`MOTION.md`](MOTION.md).
 
-- `pull-request.yml`: instala pelo lockfile, roda typecheck, lint e build em PRs para `main`.
-- `pages.yml`: apos push em `main` ou disparo manual, instala pelo lockfile, roda typecheck, lint, build e publica `dist` com as acoes oficiais do GitHub Pages.
+## GitHub Pages
 
-Quando necessario, habilite no GitHub:
+O Vite usa `base: "/portifolio/"`. Os workflows em `.github/workflows/` validam
+pull requests e publicam a `main` pelo GitHub Pages.
+
+No repositório, habilite uma vez:
 
 ```text
 Settings > Pages > Source > GitHub Actions
 ```
 
-Endereco esperado apos merge, workflow concluido e Pages habilitado:
+Endereço de publicação:
 
 ```text
 https://paulocastrodomingues.github.io/portifolio/
 ```
 
-## Creditos e aviso
-
-As fotografias usadas estao documentadas em `CREDITS.md`.
-
-Projetos, depoimentos e numeros sao ficticios e servem apenas para demonstracao de interface.
+As fotografias e respectivas licenças estão em [`CREDITS.md`](CREDITS.md).

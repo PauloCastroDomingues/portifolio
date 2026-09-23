@@ -1,0 +1,183 @@
+{
+  "site": {
+    "title": "Paulo Castro Domingues | Performance, dados e produto",
+    "description": "Portfólio de Paulo Castro Domingues: produtos digitais, análise de performance e sistemas que transformam dados em decisões.",
+    "url": "https://paulocastrodomingues.github.io/portifolio/",
+    "themeColor": "#080b10",
+    "ogImage": "media/hero.jpg"
+  },
+  "identity": {
+    "name": "Paulo Castro Domingues",
+    "shortName": "Paulo Castro",
+    "role": "Performance, dados e produto",
+    "company": "Reise",
+    "location": "Franca, SP",
+    "availability": "Projetos orientados por contexto, evidência e decisão"
+  },
+  "navigation": [
+    { "id": "inicio", "label": "Início" },
+    { "id": "experiencia", "label": "Abordagem" },
+    { "id": "projetos", "label": "Projetos" },
+    { "id": "contato", "label": "Contato" }
+  ],
+  "hero": {
+    "eyebrow": "Performance • Dados • Produto",
+    "titleLineOne": "Performance",
+    "titleLineTwo": "em movimento.",
+    "intro": "Transformo dados, contexto comercial e operações complexas em produtos digitais que ajudam pessoas a decidir melhor.",
+    "primaryCta": "Conhecer o trabalho",
+    "secondaryCta": "Ver projetos",
+    "media": "media/hero.jpg",
+    "mediaAlt": "Arquitetura de vidro com linhas verticais e reflexos azuis."
+  },
+  "ticker": ["PERFORMANCE", "CONTEXTO", "PRODUTO", "DECISÃO"],
+  "principles": [
+    {
+      "title": "O dado precisa chegar com contexto.",
+      "body": "Métrica isolada informa. Uma leitura que explicita fonte, regra e limite permite decidir.",
+      "label": "Princípio 01"
+    },
+    {
+      "title": "A interface deve reduzir a distância até a ação.",
+      "body": "Hierarquia, narrativa e interação existem para tornar a próxima escolha mais clara.",
+      "label": "Princípio 02"
+    },
+    {
+      "title": "Performance é um sistema, não um número.",
+      "body": "Produto, operação, calendário e comportamento precisam aparecer na mesma conversa.",
+      "label": "Princípio 03"
+    }
+  ],
+  "story": {
+    "eyebrow": "Como eu trabalho",
+    "title": "Da pergunta à decisão, sem perder o fio.",
+    "steps": [
+      {
+        "id": "ler",
+        "title": "Ler",
+        "description": "Entender a pergunta, o contexto e a qualidade do dado antes de responder."
+      },
+      {
+        "id": "conectar",
+        "title": "Conectar",
+        "description": "Cruzar sinais de performance, produto e operação para encontrar relações úteis."
+      },
+      {
+        "id": "decidir",
+        "title": "Decidir",
+        "description": "Transformar análise em uma experiência clara, acionável e auditável."
+      }
+    ]
+  },
+  "visualStory": {
+    "wideEyebrow": "Do panorama ao detalhe",
+    "wideTitle": "Leitura executiva na superfície. Evidência disponível em profundidade.",
+    "wideMedia": "media/performance-wide.jpg",
+    "wideAlt": "Fachada modernista com ritmo geométrico e céu aberto.",
+    "splitEyebrow": "Camadas de análise",
+    "splitTitle": "Cada movimento revela uma parte da decisão.",
+    "largeMedia": "media/project-launch.jpg",
+    "largeAlt": "Túnel de concreto com perspectiva profunda.",
+    "smallMedia": "media/project-discovery.jpg",
+    "smallAlt": "Corredor iluminado por uma claraboia."
+  },
+  "capabilities": {
+    "eyebrow": "Frentes de atuação",
+    "title": "Quatro competências trabalhando como um único sistema.",
+    "items": [
+      {
+        "title": "Diagnóstico",
+        "kicker": "01",
+        "media": "media/project-commerce.jpg",
+        "description": "Investigo regras, fontes e inconsistências antes de transformar dados em conclusão."
+      },
+      {
+        "title": "Performance",
+        "kicker": "02",
+        "media": "media/hero.jpg",
+        "description": "Construo leituras que conectam evolução, participação, metas e comportamento comercial."
+      },
+      {
+        "title": "Produto",
+        "kicker": "03",
+        "media": "media/project-launch.jpg",
+        "description": "Organizo fluxos, estados e prioridades para criar ferramentas úteis no trabalho real."
+      },
+      {
+        "title": "Narrativa",
+        "kicker": "04",
+        "media": "media/project-discovery.jpg",
+        "description": "Traduzo complexidade em interfaces que sustentam leitura executiva e aprofundamento."
+      }
+    ]
+  },
+  "projectsSection": {
+    "eyebrow": "Projetos selecionados",
+    "title": "Produtos reais para decisões reais."
+  },
+  "projects": [
+    {
+      "title": "Launch Analysis v2",
+      "category": "Performance de lançamentos",
+      "media": "media/project-launch.jpg",
+      "alt": "Estrutura em concreto conduzindo o olhar em profundidade.",
+      "summary": "Dashboard estático que organiza a performance de lançamentos, conecta snapshots versionados e preserva regras auditáveis de venda.",
+      "tags": ["Produto", "BigQuery", "Apps Script", "Vercel"],
+      "href": "https://launch-analysis-v2.vercel.app",
+      "cta": "Abrir projeto"
+    },
+    {
+      "title": "Panorama Comercial",
+      "category": "Inteligência comercial",
+      "media": "media/project-commerce.jpg",
+      "alt": "Arquitetura de concreto contra um céu azul intenso.",
+      "summary": "Leitura executiva de doze meses fechados, com receita, pedidos, ticket, mix, formação do pedido e comportamento comercial.",
+      "tags": ["Dados", "Comercial", "Dashboard", "SSOT"],
+      "href": "https://github.com/PauloCastroDomingues/Panorama-Comercial",
+      "cta": "Ver repositório"
+    },
+    {
+      "title": "Análises Sazonais",
+      "category": "Comportamento de compra",
+      "media": "media/performance-wide.jpg",
+      "alt": "Fachada geométrica sob luz natural.",
+      "summary": "Dashboard da Black 2025 para analisar linhas, faixas de valor, acessórios, brindes, recorrência e padrões de compra.",
+      "tags": ["Forecast", "Sazonalidade", "Vendas", "Vercel"],
+      "href": "https://analises-sazonais.vercel.app",
+      "cta": "Abrir análise"
+    },
+    {
+      "title": "Interview Mapper",
+      "category": "Discovery e processos",
+      "media": "media/project-discovery.jpg",
+      "alt": "Corredor industrial com luz e linhas de perspectiva.",
+      "summary": "Workspace para entrevistas de processos, mapa AS-IS/TO-BE, decisões, maturidade do discovery e backlog estruturado.",
+      "tags": ["Product Ops", "Discovery", "Processos", "React"],
+      "href": "https://github.com/PauloCastroDomingues/interview-mapper",
+      "cta": "Ver repositório"
+    }
+  ],
+  "metrics": {
+    "number": "07",
+    "label": "projetos públicos conectando dados, operação e produto",
+    "items": [
+      "Dashboards executivos e sistemas de análise",
+      "Produtos para performance comercial e discovery",
+      "Decisões sustentadas por fontes e regras explícitas"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Próximo movimento",
+    "title": "Vamos transformar complexidade em direção.",
+    "primaryLabel": "Ver perfil no GitHub",
+    "primaryHref": "https://github.com/PauloCastroDomingues",
+    "secondaryLabel": "Voltar ao início",
+    "secondaryHref": "#inicio"
+  },
+  "footer": {
+    "signature": "Paulo Castro Domingues",
+    "note": "Performance, dados e produto.",
+    "sourceLabel": "Código no GitHub",
+    "sourceHref": "https://github.com/PauloCastroDomingues/portifolio"
+  }
+}
