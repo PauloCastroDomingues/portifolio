@@ -1,10 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { ChevronRight } from "lucide-react";
 import { gsap } from "gsap";
 import { RocketLaunchDiagram } from "./RocketLaunchDiagram";
 import { content, storySteps } from "../data/content";
 import { motionConfig } from "../motion/config";
+import { addLaunchState, setLaunchState } from "../motion/rocketLaunch";
 import { useMotion } from "../motion/useMotion";
 
 export function StickyStory() {
@@ -13,6 +14,22 @@ export function StickyStory() {
   const [active, setActive] = useState(0);
   const { settings, reducedMotion, setStep } = useMotion();
   const enabled = settings.animations && !reducedMotion;
+  const [scrollDriven, setScrollDriven] = useState(
+    () =>
+      window.matchMedia(
+        `(min-width: ${motionConfig.devices.desktopMin}px) and (min-height: ${motionConfig.devices.pinMinHeight}px)`,
+      ).matches && enabled,
+  );
+
+  useEffect(() => {
+    const query = window.matchMedia(
+      `(min-width: ${motionConfig.devices.desktopMin}px) and (min-height: ${motionConfig.devices.pinMinHeight}px)`,
+    );
+    const update = () => setScrollDriven(query.matches && enabled);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, [enabled]);
 
   const activate = (index: number) => {
     activeRef.current = index;
@@ -28,6 +45,7 @@ export function StickyStory() {
       media.add(
         `(min-width: ${motionConfig.devices.desktopMin}px) and (min-height: ${motionConfig.devices.pinMinHeight}px)`,
         () => {
+          setLaunchState(root.current, 0);
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: root.current,
@@ -52,6 +70,9 @@ export function StickyStory() {
             .to(".story-scanline", { yPercent: 360, ease: "none" }, 0.34)
             .to(".story-visual-inner", { scale: 1.035, xPercent: -1, yPercent: 1 }, 0.67)
             .to(".story-scanline", { yPercent: 560, ease: "none" }, 0.67);
+
+          addLaunchState(tl, root.current, 1, 0.04, 0.42);
+          addLaunchState(tl, root.current, 2, 0.52, 0.46);
         },
       );
 
@@ -73,7 +94,7 @@ export function StickyStory() {
             <span className="story-visual-label">{storySteps[active].code}</span>
             <span className="story-scanline" aria-hidden="true" />
             <div className="story-visual-inner">
-              <RocketLaunchDiagram activeIndex={active} />
+              <RocketLaunchDiagram activeIndex={active} scrollDriven={scrollDriven} />
             </div>
             <span className="story-visual-metric">{storySteps[active].metric}</span>
             <span className="story-visual-index" aria-hidden="true">

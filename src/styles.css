@@ -785,11 +785,39 @@ h2 {
   grid-row: 1 / span 2;
   overflow: hidden;
   aspect-ratio: 1.05;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background-color: #0d1119;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 42px 42px;
+  border: 1px solid rgba(81, 229, 255, 0.32);
+  background-color: #07111f;
+  background-image: linear-gradient(rgba(81, 229, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(81, 229, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(81, 229, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(81, 229, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+  box-shadow: inset 0 0 80px rgba(36, 87, 255, 0.1);
+}
+
+.story-visual::before,
+.story-visual::after {
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  border-color: #51e5ff;
+  content: "";
+  pointer-events: none;
+}
+
+.story-visual::before {
+  top: 8px;
+  left: 8px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.story-visual::after {
+  right: 8px;
+  bottom: 8px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .story-visual-label,
@@ -797,7 +825,7 @@ h2 {
 .story-visual-metric {
   position: absolute;
   z-index: 3;
-  color: var(--gray-300);
+  color: rgba(223, 250, 255, 0.72);
   font-size: 0.68rem;
   font-weight: 850;
 }
@@ -805,7 +833,8 @@ h2 {
 .story-visual-label {
   top: 16px;
   left: 18px;
-  color: var(--signal);
+  color: #51e5ff;
+  text-shadow: 0 0 12px rgba(81, 229, 255, 0.48);
 }
 
 .story-visual-index {
@@ -826,9 +855,10 @@ h2 {
   right: 0;
   left: 0;
   height: 2px;
-  background: var(--signal);
-  box-shadow: 0 0 22px rgba(215, 255, 63, 0.55);
-  opacity: 0.72;
+  height: 1px;
+  background: #51e5ff;
+  box-shadow: 0 0 18px rgba(81, 229, 255, 0.62);
+  opacity: 0.58;
 }
 
 .story-visual-inner {
@@ -846,142 +876,218 @@ h2 {
 
 .launch-diagram svg {
   overflow: visible;
+  font-family: var(--font-mono, "Courier New", monospace);
 }
 
-.launch-grid-marks line {
-  stroke: rgba(255, 255, 255, 0.08);
+.blueprint-frame path {
+  fill: none;
+  stroke: rgba(81, 229, 255, 0.28);
+  stroke-width: 1;
+}
+
+.launch-grid-marks line,
+.launch-grid-marks path,
+.launch-grid-marks circle {
+  fill: none;
+  stroke: rgba(81, 229, 255, 0.1);
+  stroke-width: 1;
+}
+
+.launch-grid-marks circle {
+  stroke-dasharray: 2 9;
+}
+
+.blueprint-copy text,
+.technical-callouts text {
+  fill: rgba(157, 240, 255, 0.7);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.technical-callouts path {
+  fill: none;
+  stroke: rgba(81, 229, 255, 0.48);
   stroke-width: 1;
 }
 
 .launch-stars circle {
-  fill: var(--signal);
+  fill: #51e5ff;
   opacity: 0.62;
 }
 
 .route-base,
-.route-progress {
+.route-progress,
+.route-flow {
   fill: none;
   stroke-linecap: round;
-  stroke-width: 3;
 }
 
 .route-base {
-  stroke: rgba(255, 255, 255, 0.16);
-  stroke-dasharray: 5 11;
+  stroke: rgba(81, 229, 255, 0.17);
+  stroke-width: 9;
 }
 
 .route-progress {
-  stroke: var(--signal);
+  stroke: #dffaff;
+  stroke-width: 2.5;
   stroke-dasharray: 475;
   stroke-dashoffset: 475;
-  filter: drop-shadow(0 0 5px rgba(215, 255, 63, 0.55));
+  filter: drop-shadow(0 0 6px rgba(81, 229, 255, 0.75));
+}
+
+.route-flow {
+  stroke: #51e5ff;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 11;
+  opacity: 0.8;
+  animation: routeFlow 1.1s linear infinite;
 }
 
 .orbit-system ellipse,
 .orbit-system path {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.72);
-  stroke-width: 2;
+  stroke: rgba(81, 229, 255, 0.62);
+  stroke-width: 1.5;
 }
 
 .orbit-system circle {
-  fill: var(--signal);
-  stroke: var(--ink);
-  stroke-width: 3;
+  fill: #07111f;
+  stroke: #dffaff;
+  stroke-width: 2;
 }
 
 .orbit-system .orbit-arrow {
-  stroke: var(--signal);
-  stroke-width: 3;
+  stroke: #51e5ff;
+  stroke-width: 2;
+}
+
+.orbit-system .data-link {
+  stroke-dasharray: 3 6;
 }
 
 .launch-tower path {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.42);
-  stroke-width: 3;
-}
-
-.exhaust-clouds circle {
-  fill: rgba(255, 255, 255, 0.12);
-  stroke: rgba(255, 255, 255, 0.42);
+  stroke: rgba(81, 229, 255, 0.48);
   stroke-width: 2;
 }
 
+.launch-tower .dimension-line {
+  stroke: rgba(157, 240, 255, 0.32);
+  stroke-width: 1;
+}
+
+.exhaust-clouds circle {
+  fill: rgba(36, 87, 255, 0.06);
+  stroke: rgba(81, 229, 255, 0.34);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+
 .rocket-body {
-  fill: var(--white);
-  stroke: var(--white);
-  stroke-width: 3;
+  fill: rgba(7, 17, 31, 0.88);
+  stroke: #dffaff;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px rgba(81, 229, 255, 0.35));
 }
 
 .rocket-panel {
-  fill: var(--blue);
+  fill: rgba(36, 87, 255, 0.35);
+  stroke: #51e5ff;
+  stroke-width: 1;
 }
 
 .rocket-axis {
   fill: none;
-  stroke: rgba(8, 11, 16, 0.28);
-  stroke-width: 2;
+  stroke: rgba(81, 229, 255, 0.35);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
 }
 
 .rocket-window {
-  fill: var(--ink);
-  stroke: var(--signal);
-  stroke-width: 5;
+  fill: #2457ff;
+  stroke: #dffaff;
+  stroke-width: 3;
+}
+
+.rocket-halo {
+  fill: none;
+  stroke: #51e5ff;
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
 }
 
 .rocket-fin-left,
 .rocket-fin-right,
 .booster-left path,
 .booster-right path {
-  fill: var(--gray-300);
-  stroke: var(--white);
-  stroke-width: 2;
+  fill: rgba(36, 87, 255, 0.16);
+  stroke: #9df0ff;
+  stroke-width: 1.5;
 }
 
 .flame-outer {
-  fill: var(--coral);
+  fill: rgba(36, 87, 255, 0.45);
+  stroke: #51e5ff;
+  stroke-width: 1.5;
 }
 
 .flame-inner {
-  fill: var(--signal);
+  fill: #dffaff;
+  filter: drop-shadow(0 0 6px rgba(81, 229, 255, 0.9));
+}
+
+.thrust-vector path {
+  fill: none;
+  stroke: #51e5ff;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
 }
 
 .altitude-scale path {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.3);
-  stroke-width: 2;
+  stroke: rgba(81, 229, 255, 0.36);
+  stroke-width: 1.5;
 }
 
 .altitude-marker path {
-  fill: var(--signal);
+  fill: #51e5ff;
   stroke: none;
+  filter: drop-shadow(0 0 5px rgba(81, 229, 255, 0.8));
 }
 
 .telemetry path,
 .stage-meter > path:first-child {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.24);
-  stroke-width: 2;
+  stroke: rgba(81, 229, 255, 0.3);
+  stroke-width: 1.5;
 }
 
 .telemetry rect {
-  fill: var(--blue);
+  fill: #2457ff;
 }
 
 .telemetry-bar-2 {
-  fill: var(--coral) !important;
+  fill: #9df0ff !important;
 }
 
 .telemetry-bar-3 {
-  fill: var(--signal) !important;
+  fill: #51e5ff !important;
+}
+
+.telemetry .telemetry-wave {
+  stroke: #dffaff;
+  stroke-dasharray: 8 5;
+  animation: telemetryFlow 900ms linear infinite;
 }
 
 .stage-progress {
   fill: none;
-  stroke: var(--signal);
-  stroke-width: 4;
+  stroke: #51e5ff;
+  stroke-width: 3;
   transform: scaleX(0.333);
   transform-origin: left;
+  filter: drop-shadow(0 0 5px rgba(81, 229, 255, 0.72));
 }
 
 .launch-diagram.is-ambient .flame-inner {
@@ -992,12 +1098,28 @@ h2 {
   animation: targetPulse 1.6s ease-in-out infinite;
 }
 
+.launch-diagram.is-ambient .rocket-halo {
+  animation: haloPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes routeFlow {
+  to { stroke-dashoffset: -28; }
+}
+
+@keyframes telemetryFlow {
+  to { stroke-dashoffset: -26; }
+}
+
 @keyframes flamePulse {
   to { transform: scaleY(0.72); transform-origin: center top; }
 }
 
 @keyframes targetPulse {
   50% { opacity: 0.42; }
+}
+
+@keyframes haloPulse {
+  50% { opacity: 0.25; transform: scale(1.18); transform-origin: center; }
 }
 
 .photo-blocks {

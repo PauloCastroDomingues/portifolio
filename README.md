@@ -66,6 +66,8 @@ referenciadas existem antes do build.
 - Marquee pausável e princípios navegáveis manualmente.
 - Lançamento de performance em três estágios, guiado por rolagem no desktop e
   por toque/teclado em tablets e celulares.
+- Visual técnico em blueprint com trajetória contínua, telemetria, vetores e
+  estágios sincronizados ao progresso da narrativa.
 - Fotografias com cortina, escala e parallax interno independentes.
 - Cards expansivos pausáveis e layout vertical no mobile.
 - Cases com revelação progressiva e parallax individual.

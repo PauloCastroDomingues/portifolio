@@ -26,5 +26,7 @@ alterar o componente.
   criar pin abaixo de `1081px` ou em telas baixas.
 - Imagens revelam por cortina e escala antes de iniciar o deslocamento de parallax.
 - O painel de métricas usa `clip-path`; nenhuma largura do layout é recalculada.
-- O foguete possui estados independentes de posição, rotação, chama, propulsores,
-  rota, órbita, telemetria e altitude. No mobile, os estágios são botões acessíveis.
+- No desktop, o foguete blueprint percorre uma timeline contínua ligada ao scroll:
+  posição, rotação, chama, propulsores, rota, órbita, vetores, telemetria e altitude
+  evoluem no mesmo progresso. No mobile, os estágios continuam como botões
+  acessíveis com transições suaves e sem pin prolongado.
