@@ -21,7 +21,7 @@ export const motionConfig = {
     scale: 1.12,
   },
   devices: {
-    desktopMin: 900,
+    desktopMin: 1081,
     pointerMin: 900,
     pinMinHeight: 680,
   },

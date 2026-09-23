@@ -49,23 +49,29 @@
     }
   ],
   "story": {
-    "eyebrow": "Como eu trabalho",
-    "title": "Da pergunta à decisão, sem perder o fio.",
+    "eyebrow": "Trajetória de performance",
+    "title": "Toda decisão precisa de um bom lançamento.",
     "steps": [
       {
-        "id": "ler",
-        "title": "Ler",
-        "description": "Entender a pergunta, o contexto e a qualidade do dado antes de responder."
+        "id": "preparar",
+        "title": "Preparar",
+        "code": "IGNITION CHECK",
+        "metric": "FONTES / REGRAS / CONTEXTO",
+        "description": "Validar a pergunta, as fontes e as regras antes de acionar qualquer análise."
       },
       {
-        "id": "conectar",
-        "title": "Conectar",
-        "description": "Cruzar sinais de performance, produto e operação para encontrar relações úteis."
+        "id": "acelerar",
+        "title": "Acelerar",
+        "code": "ASCENT / SIGNAL",
+        "metric": "PERFORMANCE / PRODUTO / OPERAÇÃO",
+        "description": "Conectar sinais de performance, produto e operação para ganhar altitude com direção."
       },
       {
-        "id": "decidir",
-        "title": "Decidir",
-        "description": "Transformar análise em uma experiência clara, acionável e auditável."
+        "id": "orbita",
+        "title": "Entrar em órbita",
+        "code": "ORBIT / DECISION",
+        "metric": "CLAREZA / AÇÃO / APRENDIZADO",
+        "description": "Transformar a trajetória em uma decisão clara, acionável e pronta para evoluir."
       }
     ]
   },

@@ -683,41 +683,44 @@ h2 {
 .story-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr;
   gap: var(--grid-gap);
   align-items: center;
-  padding: 100px 0;
+  min-height: 100svh;
+  padding: 94px 0 48px;
 }
 
 .story-copy {
   grid-column: 1 / span 5;
+  grid-row: 1;
+  align-self: end;
 }
 
 .story-copy h2 {
   max-width: 11ch;
   color: var(--white);
-  font-size: 4.4rem;
+  font-size: 4rem;
 }
 
-.story-copy ol {
+.story-steps {
+  grid-column: 1 / span 5;
+  grid-row: 2;
+  align-self: start;
   display: grid;
   gap: 0;
   padding: 0;
-  margin: 30px 0 0;
+  margin: 24px 0 0;
   list-style: none;
 }
 
-.story-copy li {
+.story-steps li {
   position: relative;
-  display: grid;
-  grid-template-columns: 46px 1fr;
-  gap: 7px 18px;
-  padding: 15px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   color: #7e8795;
   transition: color 320ms ease;
 }
 
-.story-copy li > i {
+.story-steps li > i {
   position: absolute;
   right: 0;
   bottom: -1px;
@@ -729,25 +732,36 @@ h2 {
   transition: transform 420ms ease;
 }
 
-.story-copy li.is-active {
+.story-steps li.is-active {
   color: var(--white);
 }
 
-.story-copy li.is-active > i {
+.story-steps li.is-active > i {
   transform: scaleX(1);
 }
 
-.story-copy li > span {
+.story-steps button {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 7px 16px;
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.story-steps button > span {
   color: var(--signal);
   font-size: 0.78rem;
   font-weight: 900;
 }
 
-.story-copy li strong {
+.story-steps button strong {
   font-size: 1.6rem;
 }
 
-.story-copy li p {
+.story-steps button p {
   grid-column: 2;
   max-width: 44ch;
   margin: 0;
@@ -755,9 +769,20 @@ h2 {
   line-height: 1.5;
 }
 
+.story-steps button svg {
+  grid-column: 3;
+  grid-row: 1;
+  transition: transform 320ms ease;
+}
+
+.story-steps li.is-active button svg {
+  transform: rotate(90deg);
+}
+
 .story-visual {
   position: relative;
   grid-column: 7 / span 6;
+  grid-row: 1 / span 2;
   overflow: hidden;
   aspect-ratio: 1.05;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -768,7 +793,8 @@ h2 {
 }
 
 .story-visual-label,
-.story-visual-index {
+.story-visual-index,
+.story-visual-metric {
   position: absolute;
   z-index: 3;
   color: var(--gray-300);
@@ -779,11 +805,18 @@ h2 {
 .story-visual-label {
   top: 16px;
   left: 18px;
+  color: var(--signal);
 }
 
 .story-visual-index {
   right: 18px;
   bottom: 16px;
+}
+
+.story-visual-metric {
+  bottom: 16px;
+  left: 18px;
+  max-width: 65%;
 }
 
 .story-scanline {
@@ -801,61 +834,170 @@ h2 {
 .story-visual-inner {
   width: 100%;
   height: 100%;
-  padding: 48px;
+  padding: 34px;
   will-change: transform;
 }
 
-.diagram,
-.diagram svg {
+.launch-diagram,
+.launch-diagram svg {
   width: 100%;
   height: 100%;
 }
 
-.diagram {
-  color: var(--white);
+.launch-diagram svg {
+  overflow: visible;
 }
 
-.diagram path,
-.diagram circle {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 3;
-  opacity: 0.2;
-  transition: opacity 320ms ease, stroke 320ms ease;
+.launch-grid-marks line {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
 }
 
-.diagram-dot,
-.travel-dot {
+.launch-stars circle {
   fill: var(--signal);
+  opacity: 0.62;
+}
+
+.route-base,
+.route-progress {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.route-base {
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-dasharray: 5 11;
+}
+
+.route-progress {
   stroke: var(--signal);
+  stroke-dasharray: 475;
+  stroke-dashoffset: 475;
+  filter: drop-shadow(0 0 5px rgba(215, 255, 63, 0.55));
 }
 
-.diagram-ler .cube-lines path,
-.diagram-conectar .network path,
-.diagram-conectar .network circle,
-.diagram-decidir .planes path {
-  opacity: 1;
+.orbit-system ellipse,
+.orbit-system path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-width: 2;
+}
+
+.orbit-system circle {
+  fill: var(--signal);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+
+.orbit-system .orbit-arrow {
+  stroke: var(--signal);
+  stroke-width: 3;
+}
+
+.launch-tower path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.42);
+  stroke-width: 3;
+}
+
+.exhaust-clouds circle {
+  fill: rgba(255, 255, 255, 0.12);
+  stroke: rgba(255, 255, 255, 0.42);
+  stroke-width: 2;
+}
+
+.rocket-body {
+  fill: var(--white);
   stroke: var(--white);
+  stroke-width: 3;
 }
 
-.travel-dot {
-  opacity: 1;
+.rocket-panel {
+  fill: var(--blue);
 }
 
-.diagram.is-ambient .travel-dot {
-  animation: pulseTravel 2.8s ease-in-out infinite;
+.rocket-axis {
+  fill: none;
+  stroke: rgba(8, 11, 16, 0.28);
+  stroke-width: 2;
 }
 
-.diagram.is-ambient .diagram-dot {
-  animation: dotPulse 3.4s ease-in-out infinite;
+.rocket-window {
+  fill: var(--ink);
+  stroke: var(--signal);
+  stroke-width: 5;
 }
 
-@keyframes pulseTravel {
-  50% { transform: translate(170px, 85px) scale(1.45); opacity: 0.6; }
+.rocket-fin-left,
+.rocket-fin-right,
+.booster-left path,
+.booster-right path {
+  fill: var(--gray-300);
+  stroke: var(--white);
+  stroke-width: 2;
 }
 
-@keyframes dotPulse {
-  50% { opacity: 0.28; }
+.flame-outer {
+  fill: var(--coral);
+}
+
+.flame-inner {
+  fill: var(--signal);
+}
+
+.altitude-scale path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+}
+
+.altitude-marker path {
+  fill: var(--signal);
+  stroke: none;
+}
+
+.telemetry path,
+.stage-meter > path:first-child {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.24);
+  stroke-width: 2;
+}
+
+.telemetry rect {
+  fill: var(--blue);
+}
+
+.telemetry-bar-2 {
+  fill: var(--coral) !important;
+}
+
+.telemetry-bar-3 {
+  fill: var(--signal) !important;
+}
+
+.stage-progress {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 4;
+  transform: scaleX(0.333);
+  transform-origin: left;
+}
+
+.launch-diagram.is-ambient .flame-inner {
+  animation: flamePulse 420ms ease-in-out infinite alternate;
+}
+
+.launch-diagram.is-ambient .orbit-target {
+  animation: targetPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes flamePulse {
+  to { transform: scaleY(0.72); transform-origin: center top; }
+}
+
+@keyframes targetPulse {
+  50% { opacity: 0.42; }
 }
 
 .photo-blocks {
@@ -1433,15 +1575,19 @@ h2 {
   font-weight: 850;
 }
 
+@media (max-width: 1440px) {
+  .hero-title { font-size: 8.7rem; }
+}
+
 @media (max-width: 1240px) {
   h2 { font-size: 4.4rem; }
-  .hero-title { font-size: 7.4rem; }
+  .hero-title { font-size: 6.4rem; }
   .marquee-track { font-size: 5.8rem; }
   .split-photo-copy h2 { font-size: 3.8rem; }
   .metric-number { font-size: 14rem; }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   :root {
     --header-height: 62px;
     --grid-gap: 20px;
@@ -1501,6 +1647,7 @@ h2 {
   .testimonial-card,
   .story-copy,
   .story-visual,
+  .story-steps,
   .split-photo-copy,
   .split-photo-large,
   .split-photo-small,
@@ -1513,8 +1660,23 @@ h2 {
 
   .story { min-height: auto; }
   .story-pin { min-height: auto; }
-  .story-grid { gap: 58px; padding: 100px 0; }
-  .story-visual { aspect-ratio: 1.15; }
+  .story-grid {
+    grid-template-rows: auto;
+    gap: 38px;
+    min-height: auto;
+    padding: 100px 0;
+  }
+  .story-copy,
+  .story-visual,
+  .story-steps { grid-row: auto; }
+  .story-copy { order: 1; }
+  .story-visual {
+    order: 2;
+    width: min(100%, 760px);
+    aspect-ratio: 1.1;
+    justify-self: center;
+  }
+  .story-steps { order: 3; margin-top: 0; }
 
   .split-photo { padding: 100px 0 140px; }
   .split-photo-copy { max-width: 660px; }
@@ -1609,12 +1771,14 @@ h2 {
   .testimonial-card { min-height: 390px; padding: 30px 26px; }
   .testimonial-card h2 { font-size: 2.45rem; }
 
-  .story-grid { padding: 82px 0; }
+  .story-grid { gap: 30px; padding: 82px 0; }
   .story-copy h2 { font-size: 3rem; }
-  .story-copy li { grid-template-columns: 36px 1fr; }
-  .story-copy li strong { font-size: 1.35rem; }
-  .story-visual { aspect-ratio: 0.95; }
-  .story-visual-inner { padding: 28px; }
+  .story-steps button { grid-template-columns: 34px 1fr auto; gap: 7px 10px; padding: 18px 0; }
+  .story-steps button strong { font-size: 1.3rem; }
+  .story-steps button p { grid-column: 2 / -1; }
+  .story-visual { aspect-ratio: 1; }
+  .story-visual-inner { padding: 16px; }
+  .story-visual-metric { display: none; }
 
   .wide-photo { min-height: 680px; }
   .wide-photo-caption { width: calc(100vw - 32px); margin-bottom: 40px; }
@@ -1650,8 +1814,34 @@ h2 {
   .closing-actions .button { width: 100%; }
 }
 
-@media (max-height: 700px) and (min-width: 981px) {
-  .hero-title { font-size: 7rem; }
+@media (max-width: 360px) {
+  :root { --container: calc(100vw - 24px); }
+  h2 { font-size: 2.55rem; }
+  .site-header { width: calc(100% - 12px); }
+  .brand { gap: 7px; }
+  .brand > span { width: 32px; height: 32px; }
+  .hero,
+  .hero-grid { min-height: 750px; }
+  .hero-grid { grid-template-rows: auto 286px auto auto; padding-top: 88px; }
+  .hero-title { font-size: 2.15rem; }
+  .hero-media { height: 304px; }
+  .hero-actions .button { width: 100%; }
+  .marquee-track { font-size: 3.2rem; }
+  .testimonial-card { min-height: 410px; padding-inline: 22px; }
+  .testimonial-card h2 { font-size: 2.1rem; }
+  .story-copy h2 { font-size: 2.5rem; }
+  .story-visual-label,
+  .story-visual-index { font-size: 0.58rem; }
+  .story-visual-inner { padding: 10px; }
+  .wide-photo-caption h2,
+  .split-photo-copy h2 { font-size: 2.55rem; }
+  .project-body h3 { font-size: 2rem; }
+  .metric-number { font-size: 7rem; }
+  .closing-grid h2 { font-size: 2.75rem; }
+}
+
+@media (max-height: 700px) and (min-width: 1081px) {
+  .hero-title { font-size: 6.6rem; }
   .hero-media { height: 62vh; }
   .hero-copy > p:not(.eyebrow) { font-size: 1rem; }
   .story-grid { padding-block: 82px; }

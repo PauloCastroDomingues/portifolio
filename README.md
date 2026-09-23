@@ -64,7 +64,8 @@ referenciadas existem antes do build.
 
 - Hero com entrada por máscara, fotografia sobreposta e reorganização do título.
 - Marquee pausável e princípios navegáveis manualmente.
-- Narrativa fixa em desktop com três estados e diagrama reativo.
+- Lançamento de performance em três estágios, guiado por rolagem no desktop e
+  por toque/teclado em tablets e celulares.
 - Fotografias com cortina, escala e parallax interno independentes.
 - Cards expansivos pausáveis e layout vertical no mobile.
 - Cases com revelação progressiva e parallax individual.
