@@ -17,7 +17,7 @@ const portfolio = JSON.parse(
 const absoluteImage = new URL(portfolio.site.ogImage, portfolio.site.url).toString();
 
 export default defineConfig({
-  base: "/portifolio/",
+  base: process.env.VERCEL === "1" ? "/" : "/portifolio/",
   plugins: [
     react(),
     {
