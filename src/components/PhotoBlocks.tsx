@@ -1,11 +1,24 @@
-﻿import { content, photos } from "../data/content";
+﻿import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { useMotion } from "../motion/useMotion";
+import { content, photos } from "../data/content";
 import { ParallaxImage } from "./ParallaxImage";
 
 export function PhotoBlocks() {
   const visual = content.visualStory;
+  const root = useRef<HTMLElement>(null);
+  const { settings, reducedMotion } = useMotion();
+
+  useGSAP(() => {
+    if (!settings.animations || reducedMotion || !root.current) return;
+    gsap.fromTo(".wide-photo-caption", { y: 54, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: "power4.out", scrollTrigger: { trigger: ".wide-photo", start: "top 64%" } });
+    gsap.fromTo(".split-photo-copy", { x: -46, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.9, ease: "power4.out", scrollTrigger: { trigger: ".split-photo", start: "top 72%" } });
+    gsap.fromTo(".performance-note", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.7, delay: 0.16, ease: "power3.out", scrollTrigger: { trigger: ".split-photo", start: "top 68%" } });
+  }, { scope: root, dependencies: [settings.animations, reducedMotion], revertOnUpdate: true });
 
   return (
-    <section className="photo-blocks section" aria-label="Narrativa visual de performance">
+    <section className="photo-blocks section" ref={root} aria-label="Narrativa visual de performance">
       <div className="wide-photo">
         <ParallaxImage src={photos.wide} alt={visual.wideAlt} intensity={1.25} />
         <div className="wide-photo-caption">

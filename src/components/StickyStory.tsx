@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motionConfig } from "../motion/config";
 import { CampaignJourneyDiagram } from "./CampaignJourneyDiagram";
 import { content, storySteps } from "../data/content";
 import { useMotion } from "../motion/useMotion";
@@ -9,8 +11,10 @@ export function StickyStory() {
   const root = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
   const { settings, reducedMotion, setStep } = useMotion();
+  const scrollActive = useRef(0);
   const enabled = settings.animations && !reducedMotion;
   const activate = (index: number) => {
+    scrollActive.current = index;
     setActive(index);
     setStep(storySteps[index].title);
   };
@@ -37,6 +41,32 @@ export function StickyStory() {
     },
     { scope: root, dependencies: [active, enabled], revertOnUpdate: false },
   );
+
+
+  useGSAP(() => {
+    if (!enabled || !root.current) return;
+    const pin = root.current.querySelector<HTMLElement>(".story-pin");
+    if (!pin) return;
+    const media = gsap.matchMedia();
+    media.add("(min-width: 1081px) and (min-height: 760px)", () => {
+      ScrollTrigger.create({
+        trigger: root.current,
+        pin,
+        start: "top top",
+        end: () => "+=" + window.innerHeight * motionConfig.scroll.storyDistanceDesktop,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          const next = Math.min(storySteps.length - 1, Math.floor(self.progress * storySteps.length));
+          if (next === scrollActive.current) return;
+          scrollActive.current = next;
+          setActive(next);
+          setStep(storySteps[next].title);
+        },
+      });
+    });
+    return () => media.revert();
+  }, { scope: root, dependencies: [enabled, setStep], revertOnUpdate: true });
 
 
 

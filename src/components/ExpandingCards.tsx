@@ -1,10 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { content, serviceCards } from "../data/content";
 import { useMotion } from "../motion/useMotion";
 import { ParallaxImage } from "./ParallaxImage";
 
 export function ExpandingCards() {
+  const rootRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const activeRef = useRef(0);
   const rafRef = useRef(0);
@@ -14,6 +17,13 @@ export function ExpandingCards() {
   const { settings, reducedMotion } = useMotion();
   const count = serviceCards.length;
   const autoPlay = settings.animations && settings.loops && !reducedMotion && visible && !paused && count > 1;
+
+  useGSAP(() => {
+    if (!settings.animations || reducedMotion || !trackRef.current) return;
+    gsap.fromTo(".channels-heading", { y: 32, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8, ease: "power4.out", scrollTrigger: { trigger: trackRef.current, start: "top 82%" } });
+    gsap.fromTo(".channel-card", { y: 52, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.74, stagger: 0.12, ease: "power4.out", scrollTrigger: { trigger: trackRef.current, start: "top 78%" } });
+    gsap.fromTo(".channel-carousel-controls", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, delay: 0.25, ease: "power3.out", scrollTrigger: { trigger: trackRef.current, start: "top 72%" } });
+  }, { scope: rootRef, dependencies: [settings.animations, reducedMotion], revertOnUpdate: true });
 
   const goTo = useCallback((index: number) => {
     const track = trackRef.current;
@@ -61,7 +71,7 @@ export function ExpandingCards() {
   };
 
   return (
-    <section className="cards-section section" id="canais" aria-labelledby="channels-title">
+    <section className="cards-section section" id="canais" aria-labelledby="channels-title" ref={rootRef}>
       <div className="container">
         <div className="section-heading channels-heading">
           <div><p className="section-kicker">{content.capabilities.eyebrow}</p><h2 id="channels-title">{content.capabilities.title}</h2></div>

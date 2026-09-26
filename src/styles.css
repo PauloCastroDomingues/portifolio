@@ -2191,3 +2191,40 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) { .channel-track { scroll-behavior: auto; } .channel-carousel-dots button, .carousel-arrow, .carousel-toggle { transition: none; } }
+
+
+/* Restore the scroll story and keep the hero headline inside its column. */
+.hero-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 22px clamp(28px, 4vw, 58px);
+}
+.hero-title {
+  max-width: none;
+  font-size: clamp(4rem, 5.45vw, 5.65rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+.hero-mask { max-width: 100%; }
+.hero-mask > span { max-width: 100%; }
+.hero-scroll svg { animation: scrollNudge 1.7s ease-in-out infinite; }
+@keyframes scrollNudge { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(4px); } }
+.story { min-height: auto; }
+.story-pin { min-height: 100svh; }
+.story-grid { grid-template-rows: auto 1fr; min-height: 100svh; padding: 94px 0 48px; }
+
+@media (max-width: 1080px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-title { max-width: 100%; font-size: clamp(3.6rem, 7.5vw, 5.25rem); }
+  .story-pin, .story-grid { min-height: auto; }
+  .story-grid { grid-template-rows: auto auto; padding: 66px 0; }
+}
+@media (max-width: 640px) {
+  .hero-title { font-size: clamp(2.7rem, 10.5vw, 3.65rem); line-height: 0.96; }
+  .hero-mask-offset { padding-left: 0; }
+  .hero-scroll svg { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll svg { animation: none; }
+}
+
+@media (min-width: 1081px) { .about-portrait img { height: 112%; margin-top: -6%; } }

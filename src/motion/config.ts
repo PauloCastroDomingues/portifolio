@@ -17,8 +17,8 @@ export const motionConfig = {
     panelDistance: 1.35,
   },
   parallax: {
-    yPercent: 10,
-    scale: 1.12,
+    yPercent: 14,
+    scale: 1.14,
   },
   devices: {
     desktopMin: 1081,
