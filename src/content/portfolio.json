@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Paulo Castro | Tráfego pago para marketplaces",
-    "description": "Gestão de anúncios para Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, decisões guiadas por dados e acompanhamento próximo.",
+    "description": "Seu anúncio recebe visitas, mas as vendas estão paradas? Tenha um diagnóstico gratuito e uma gestão de campanhas orientada por dados no Mercado Livre, Shopee e Magalu.",
     "url": "https://portifolio-gamma-seven-71.vercel.app/",
     "themeColor": "#fffaf2",
     "ogImage": "media/performance-dashboard.jpg"
@@ -37,13 +37,13 @@
     }
   ],
   "hero": {
-    "eyebrow": "GESTÃO DE ANÚNCIOS PARA MARKETPLACES",
-    "headline": "Invista com mais clareza em anúncios de marketplace",
+    "eyebrow": "MERCADO LIVRE • SHOPEE • MAGALU",
+    "headline": "Seu anúncio pode vender bem mais.",
     "titleLines": [
-      "Invista com",
-      "mais clareza."
+      "Seu anúncio pode",
+      "vender bem mais."
     ],
-    "intro": "Gestão de campanhas no Mercado Livre, Shopee e Magalu, com decisões orientadas por dados e acompanhamento próximo.",
+    "intro": "Poucas visitas ou vendas travadas? Analiso suas campanhas e mostro onde ajustar investimento, busca e posicionamento nos marketplaces.",
     "primaryCta": "Pedir diagnóstico gratuito",
     "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
     "secondaryCta": "Conhecer o processo",
@@ -206,7 +206,7 @@
   },
   "contact": {
     "eyebrow": "Próximo passo",
-    "title": "Quer entender o que está acontecendo com seus anúncios?",
+    "title": "Seu anúncio pode vender mais. Vamos descobrir o que está travando?",
     "primaryLabel": "Pedir diagnóstico gratuito",
     "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
     "secondaryLabel": "Voltar ao início",
@@ -222,6 +222,6 @@
     "title": "Quem vai cuidar dos seus anúncios",
     "media": "media/paulo-profile.jpg",
     "mediaAlt": "Paulo Castro Domingues, gestor de tráfego para marketplaces.",
-    "text": "Sou Paulo, formado em Análise e Desenvolvimento de Sistemas. Hoje atuo com dados e mídia paga na Reise. Também passei pela operação de vendedores em Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo, cuidando de campanhas, catálogo e estoque. Uno essa vivência prática à análise de dados para explicar cada decisão e acompanhar seu investimento com clareza."
+    "text": "Sou Paulo, formado em Análise e Desenvolvimento de Sistemas. Hoje atuo com dados e mídia paga na Reise. Também passei pela operação de vendedores em Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo, cuidando de campanhas, catálogo e estoque. Uno essa vivência prática à análise de dados para te mostrar, com números, onde seu anúncio está travando."
   }
 }

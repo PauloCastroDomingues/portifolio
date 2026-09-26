@@ -1620,7 +1620,7 @@ h2 {
   }
   .story-narrative { order: 3; width: min(100%, 760px); margin-top: 0; justify-self: center; }
 
-  .split-photo { padding: 100px 0 140px; }
+  .split-photo { padding: 100px 0 130px; }
   .split-photo-copy { max-width: 660px; }
   .split-photo-large { width: 78%; justify-self: end; aspect-ratio: 0.9; }
   .split-photo-small {
@@ -1923,11 +1923,11 @@ h2 {
 }
 .story-copy h2 { max-width: 14ch; font-size: clamp(2.5rem, 4vw, 4rem); }
 .wide-photo { min-height: 68svh; }
-.split-photo { padding: 88px 0 104px; }
-.cards-section { padding: 92px 0 104px; }
-.projects { padding: 92px 0 104px; }
+.split-photo { padding: 100px 0 130px; }
+.cards-section { padding: 100px 0 115px; }
+.projects { padding: 100px 0 125px; }
 .project-grid { gap: 48px var(--grid-gap); }
-.metric-section { min-height: auto; padding: 76px 0; }
+.metric-section { min-height: 135svh; padding: 100px 0; }
 .metric-panel,
 .metric-panel-inner { min-height: 500px; }
 .metric-panel-inner { gap: 48px; padding: 52px; }
