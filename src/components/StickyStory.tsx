@@ -84,7 +84,7 @@ export function StickyStory() {
                 const next = Math.min(storySteps.length - 1, Math.floor(self.progress * storySteps.length));
                 if (next !== activeRef.current) activate(next);
               },
-              onLeave: () => setStep("órbita concluída"),
+              onLeave: () => setStep("processo concluído"),
               onEnterBack: () => setStep(storySteps[activeRef.current].title),
             },
           });
@@ -96,13 +96,12 @@ export function StickyStory() {
             .to(".story-visual-inner", { scale: 1.035, xPercent: -1, yPercent: 1 }, 0.67)
             .to(".story-scanline", { yPercent: 560, ease: "none" }, 0.67);
 
-          addLaunchState(tl, root.current, 1, 0.04, 0.42);
-          addLaunchState(tl, root.current, 2, 0.52, 0.46);
-
-          tl.to(panels[0], { autoAlpha: 0, y: -20, duration: 0.07, ease: "power2.in" }, 0.27)
-            .to(panels[1], { autoAlpha: 1, y: 0, duration: 0.11, ease: "power3.out" }, 0.31)
-            .to(panels[1], { autoAlpha: 0, y: -20, duration: 0.07, ease: "power2.in" }, 0.6)
-            .to(panels[2], { autoAlpha: 1, y: 0, duration: 0.11, ease: "power3.out" }, 0.64);
+          for (let index = 1; index < storySteps.length; index += 1) {
+            const position = index / storySteps.length;
+            addLaunchState(tl, root.current, index, position, 0.18);
+            tl.to(panels[index - 1], { autoAlpha: 0, y: -20, duration: 0.07, ease: "power2.in" }, Math.max(0, position - 0.07))
+              .to(panels[index], { autoAlpha: 1, y: 0, duration: 0.11, ease: "power3.out" }, position);
+          }
         },
       );
 
@@ -120,7 +119,7 @@ export function StickyStory() {
             <h2>{content.story.title}</h2>
           </div>
 
-          <div className="story-visual" aria-label="Foguete avançando por três estágios de performance">
+          <div className="story-visual" aria-label="Etapas da gestão de tráfego pago">
             <span className="story-visual-label">{storySteps[active].code}</span>
             <span className="story-scanline" aria-hidden="true" />
             <div className="story-visual-inner">
@@ -128,7 +127,7 @@ export function StickyStory() {
             </div>
             <span className="story-visual-metric">{storySteps[active].metric}</span>
             <span className="story-visual-index" aria-hidden="true">
-              0{active + 1} / 03
+              {String(active + 1).padStart(2, "0")} / {String(storySteps.length).padStart(2, "0")}
             </span>
           </div>
 

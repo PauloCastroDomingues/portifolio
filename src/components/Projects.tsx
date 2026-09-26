@@ -38,12 +38,15 @@ export function Projects() {
             <p className="section-kicker">{content.projectsSection.eyebrow}</p>
             <h2>{content.projectsSection.title}</h2>
           </div>
-          <span>{String(projects.length).padStart(2, "0")} CASES</span>
+          <span>{projects.length === 1 ? "SIMULAÇÃO" : `${String(projects.length).padStart(2, "0")} CASES`}</span>
         </div>
         <div className="project-grid">
-          {projects.map((project, index) => (
+          {projects.map((project, index) => {
+            const href = project.href || "#experiencia";
+            const external = href.startsWith("http");
+            return (
             <article className="project-card" key={project.title}>
-              <a href={project.href} target="_blank" rel="noreferrer" aria-label={`${project.cta}: ${project.title}`}>
+              <a href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})} aria-label={`${project.cta}: ${project.title}`}>
                 <ParallaxImage
                   className="project-image"
                   src={project.image}
@@ -61,13 +64,14 @@ export function Projects() {
                 <ul className="project-tags" aria-label="Tecnologias e temas">
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
-                <a className="project-link" href={project.href} target="_blank" rel="noreferrer">
+                <a className="project-link" href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})}>
                   {project.cta}
                   <ArrowUpRight aria-hidden="true" size={19} />
                 </a>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

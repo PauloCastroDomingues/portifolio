@@ -20,7 +20,7 @@ export function PhotoBlocks() {
           <p className="section-kicker">{visual.splitEyebrow}</p>
           <h2>{visual.splitTitle}</h2>
           <p className="split-support">
-            Visão geral, recorte e evidência convivem sem competir pela atenção.
+            {visual.splitSupport}
           </p>
         </div>
         <ParallaxImage

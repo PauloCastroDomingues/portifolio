@@ -63,7 +63,7 @@ export function ExpandingPanel() {
               {panelStats.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
-          <span className="metric-corner" aria-hidden="true">PUBLIC / WORK</span>
+          <span className="metric-corner" aria-hidden="true">ETAPAS / PROCESSO</span>
         </div>
       </div>
     </section>

@@ -81,8 +81,8 @@ export function Header() {
         <nav className="desktop-nav" aria-label="Navegação principal">
           {nav}
         </nav>
-        <a className="header-cta" href="#projetos">
-          Projetos
+        <a className="header-cta" href={content.contact.primaryHref} target="_blank" rel="noreferrer">
+          {content.contact.primaryLabel}
           <ArrowDownRight aria-hidden="true" size={17} />
         </a>
         <button
@@ -106,8 +106,8 @@ export function Header() {
         aria-hidden={!open}
       >
         <nav aria-label="Navegação móvel">{nav}</nav>
-        <a className="header-cta" href="#projetos" onClick={() => setOpen(false)}>
-          Projetos
+        <a className="header-cta" href={content.contact.primaryHref} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+          {content.contact.primaryLabel}
           <ArrowDownRight aria-hidden="true" size={17} />
         </a>
       </div>

@@ -53,3 +53,8 @@ npm run build
 ```
 
 Depois do commit na `main`, o workflow do GitHub Pages publica a nova versão.
+
+
+## Landing page de tráfego pago
+
+O hero usa `hero.headline` e `hero.titleLines` para a manchete, além de `hero.primaryHref` para o CTA do WhatsApp. A seção `story.steps` apresenta as quatro etapas: diagnóstico, setup, gestão e resultado. O bloco `about` aparece na seção Sobre. O projeto em `projects` é uma simulação ilustrativa e não representa um case de cliente.

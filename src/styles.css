@@ -2137,3 +2137,49 @@ h2 {
   .story { min-height: auto; }
   .story-pin { min-height: auto; }
 }
+
+
+/* Landing page content: marketplace traffic management */
+.hero-title {
+  gap: 0.04em;
+  font-size: clamp(4rem, 7.2vw, 8rem);
+  line-height: 0.9;
+}
+
+.about-section {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.about-grid > div:first-child { grid-column: 1 / span 5; }
+.about-copy { grid-column: 7 / -1; max-width: 740px; }
+.about-copy p {
+  margin: 0 0 32px;
+  color: var(--gray-100);
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.45;
+}
+.about-copy .text-link { color: var(--signal); }
+.project-card:only-child { grid-column: 3 / span 8; margin-top: 0; }
+
+@media (max-width: 1080px) {
+  .hero-title { font-size: clamp(3.8rem, 7vw, 5rem); }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-grid > div:first-child,
+  .about-copy,
+  .project-card:only-child { grid-column: 1; }
+}
+
+@media (max-width: 640px) {
+  .hero-title { font-size: clamp(2.15rem, 10vw, 3.2rem); line-height: 0.95; }
+  .hero-mask-offset { padding-left: 7%; }
+  .about-grid { gap: 24px; }
+  .about-copy p { font-size: 1.2rem; }
+}

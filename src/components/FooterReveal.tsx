@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { ArrowUp, ArrowUpRight, GitBranch } from "lucide-react";
+import { ArrowUp, ArrowUpRight, MessageCircle } from "lucide-react";
 import { gsap } from "gsap";
 import { content } from "../data/content";
 import { useMotion } from "../motion/useMotion";
@@ -52,7 +52,7 @@ export function FooterReveal() {
           </div>
           <div className="closing-actions">
             <a className="button button-dark" href={content.contact.primaryHref} target="_blank" rel="noreferrer">
-              <GitBranch aria-hidden="true" size={19} />
+              <MessageCircle aria-hidden="true" size={19} />
               {content.contact.primaryLabel}
               <ArrowUpRight aria-hidden="true" size={18} />
             </a>

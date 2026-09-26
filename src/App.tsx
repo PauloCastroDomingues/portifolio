@@ -1,4 +1,5 @@
 import { DebugPanel } from "./components/DebugPanel";
+import { About } from "./components/About";
 import { ExpandingCards } from "./components/ExpandingCards";
 import { ExpandingPanel } from "./components/ExpandingPanel";
 import { FooterReveal } from "./components/FooterReveal";
@@ -25,6 +26,7 @@ function Page() {
         <StickyStory />
         <PhotoBlocks />
         <ExpandingCards />
+        <About />
         <Projects />
         <ExpandingPanel />
       </main>

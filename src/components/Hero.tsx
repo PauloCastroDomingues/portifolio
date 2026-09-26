@@ -9,8 +9,6 @@ import { useMotion } from "../motion/useMotion";
 
 export function Hero() {
   const root = useRef<HTMLElement>(null);
-  const lineOne = useRef<HTMLSpanElement>(null);
-  const lineTwo = useRef<HTMLSpanElement>(null);
   const { settings, reducedMotion } = useMotion();
   const enabled = settings.animations && !reducedMotion;
 
@@ -44,16 +42,6 @@ export function Hero() {
           0.42,
         );
 
-      const titleShift = () => {
-        const first = lineOne.current?.getBoundingClientRect();
-        const second = lineTwo.current?.getBoundingClientRect();
-        if (!first || !second || window.innerWidth < 1080) return { x: 0, y: 0 };
-        return {
-          x: first.right + Math.max(20, window.innerWidth * 0.014) - second.left,
-          y: first.top - second.top,
-        };
-      };
-
       const scroll = gsap.timeline({
         scrollTrigger: {
           trigger: root.current,
@@ -65,11 +53,6 @@ export function Hero() {
       });
 
       scroll
-        .to(
-          lineTwo.current,
-          { x: () => titleShift().x, y: () => titleShift().y, ease: "none" },
-          0,
-        )
         .to(".hero-title", { yPercent: -12, ease: "none" }, 0)
         .to(".hero-copy", { y: -54, autoAlpha: 0.15, ease: "none" }, 0)
         .to(".hero-media", { yPercent: 10, ease: "none" }, 0)
@@ -103,11 +86,11 @@ export function Hero() {
           <p className="eyebrow">{content.hero.eyebrow}</p>
           <p>{content.hero.intro}</p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#experiencia">
+            <a className="button button-dark" href={content.hero.primaryHref} target="_blank" rel="noreferrer">
               {content.hero.primaryCta}
               <ArrowDownRight aria-hidden="true" size={18} />
             </a>
-            <a className="text-link" href="#projetos">
+            <a className="text-link" href="#experiencia">
               {content.hero.secondaryCta}
             </a>
           </div>
@@ -115,14 +98,13 @@ export function Hero() {
 
         <h1
           className="hero-title"
-          aria-label={`${content.hero.titleLineOne} ${content.hero.titleLineTwo}`}
+          aria-label={content.hero.headline}
         >
-          <span className="hero-mask">
-            <span ref={lineOne}>{content.hero.titleLineOne}</span>
-          </span>
-          <span className="hero-mask hero-mask-offset">
-            <span ref={lineTwo}>{content.hero.titleLineTwo}</span>
-          </span>
+          {content.hero.titleLines.map((line, index) => (
+            <span className={`hero-mask ${index === content.hero.titleLines.length - 1 ? "hero-mask-offset" : ""}`} key={line}>
+              <span>{line}</span>
+            </span>
+          ))}
         </h1>
 
         <figure className="hero-media">
@@ -136,7 +118,7 @@ export function Hero() {
         <div className="hero-index hero-reveal" aria-hidden="true">
           <span>01</span>
           <span>/</span>
-          <span>PORTFOLIO</span>
+          <span>TRÁFEGO PAGO</span>
         </div>
 
         <div className="hero-status hero-reveal">

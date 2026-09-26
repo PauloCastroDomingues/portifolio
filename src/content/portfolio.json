@@ -1,198 +1,230 @@
 {
   "site": {
-    "title": "Paulo Castro Domingues | Performance, dados e produto",
-    "description": "Portfólio de Paulo Castro Domingues: produtos digitais, análise de performance e sistemas que transformam dados em decisões.",
-    "url": "https://paulocastrodomingues.github.io/portifolio/",
+    "title": "Paulo Castro | Tráfego pago para marketplaces",
+    "description": "Gestão de tráfego pago para Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, acompanhamento de campanhas e análise de resultados.",
+    "url": "https://portifolio-gamma-seven-71.vercel.app/",
     "themeColor": "#080b10",
     "ogImage": "media/hero.jpg"
   },
   "identity": {
     "name": "Paulo Castro Domingues",
     "shortName": "Paulo Castro",
-    "role": "Performance, dados e produto",
-    "company": "Reise",
+    "role": "Gestão de tráfego pago para marketplaces",
+    "company": "Mercado Livre • Shopee • Magalu",
     "location": "Franca, SP",
-    "availability": "Projetos orientados por contexto, evidência e decisão"
+    "availability": "Diagnóstico gratuito • Sem contrato engessado"
   },
   "navigation": [
-    { "id": "inicio", "label": "Início" },
-    { "id": "experiencia", "label": "Abordagem" },
-    { "id": "projetos", "label": "Projetos" },
-    { "id": "contato", "label": "Contato" }
+    {
+      "id": "inicio",
+      "label": "Início"
+    },
+    {
+      "id": "experiencia",
+      "label": "Como funciona"
+    },
+    {
+      "id": "projetos",
+      "label": "Resultados"
+    },
+    {
+      "id": "sobre",
+      "label": "Sobre"
+    },
+    {
+      "id": "contato",
+      "label": "Contato"
+    }
   ],
   "hero": {
-    "eyebrow": "Performance • Dados • Produto",
-    "titleLineOne": "Performance",
-    "titleLineTwo": "em movimento.",
-    "intro": "Transformo dados, contexto comercial e operações complexas em produtos digitais que ajudam pessoas a decidir melhor.",
-    "primaryCta": "Conhecer o trabalho",
-    "secondaryCta": "Ver projetos",
+    "eyebrow": "Tráfego pago para marketplaces",
+    "headline": "Seu anúncio no marketplace pode vender mais",
+    "titleLines": [
+      "Seu anúncio no",
+      "marketplace pode",
+      "vender mais"
+    ],
+    "intro": "Gestão de tráfego pago pra Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, sem contrato engessado.",
+    "primaryCta": "Falar agora",
+    "primaryHref": "https://wa.me/5516991485154",
+    "secondaryCta": "Como funciona",
     "media": "media/hero.jpg",
     "mediaAlt": "Arquitetura de vidro com linhas verticais e reflexos azuis."
   },
-  "ticker": ["PERFORMANCE", "CONTEXTO", "PRODUTO", "DECISÃO"],
+  "ticker": [
+    "MERCADO LIVRE ADS",
+    "SHOPEE ADS",
+    "MAGALU ADS",
+    "OTIMIZAÇÃO"
+  ],
   "principles": [
     {
-      "title": "O dado precisa chegar com contexto.",
-      "body": "Métrica isolada informa. Uma leitura que explicita fonte, regra e limite permite decidir.",
-      "label": "Princípio 01"
+      "title": "Sem promessa de venda garantida.",
+      "body": "Cada conta tem um contexto. O diagnóstico mostra oportunidades e limites antes de qualquer investimento.",
+      "label": "Transparência 01"
     },
     {
-      "title": "A interface deve reduzir a distância até a ação.",
-      "body": "Hierarquia, narrativa e interação existem para tornar a próxima escolha mais clara.",
-      "label": "Princípio 02"
+      "title": "Seu investimento precisa de acompanhamento.",
+      "body": "Orçamento, palavras-chave e posicionamentos são revistos com base no desempenho da campanha.",
+      "label": "Gestão 02"
     },
     {
-      "title": "Performance é um sistema, não um número.",
-      "body": "Produto, operação, calendário e comportamento precisam aparecer na mesma conversa.",
-      "label": "Princípio 03"
+      "title": "Relatórios para decidir com clareza.",
+      "body": "Visitas, conversão e vendas em uma leitura simples, com recomendações para o próximo ciclo.",
+      "label": "Análise 03"
     }
   ],
   "story": {
-    "eyebrow": "Trajetória de performance",
-    "title": "Toda decisão precisa de um bom lançamento.",
+    "eyebrow": "Como funciona",
+    "title": "Da análise ao acompanhamento, com clareza em cada etapa.",
     "steps": [
       {
-        "id": "preparar",
-        "title": "Preparar",
-        "code": "IGNITION CHECK",
-        "label": "Pergunta, fonte e regra",
-        "metric": "FONTES / REGRAS / CONTEXTO",
-        "description": "Validar a pergunta, as fontes e as regras antes de acionar qualquer análise.",
-        "signals": ["Objetivo definido", "Fonte confiável", "Critério explícito"],
-        "result": "Uma base confiável, com escopo e critérios claros para começar."
+        "id": "diagnostico",
+        "title": "Diagnóstico",
+        "code": "01",
+        "label": "Onde está o gargalo",
+        "metric": "VISITAS / CONVERSÃO / POSIÇÃO",
+        "description": "Análise gratuita da sua conta e dos anúncios atuais pra entender por que o resultado não está aparecendo.",
+        "signals": [
+          "Leitura de visitas, conversão e posicionamento",
+          "Identificação do principal gargalo",
+          "Plano de ação simples, sem jargão"
+        ],
+        "result": "Você sabe exatamente o que está travando suas vendas."
       },
       {
-        "id": "acelerar",
-        "title": "Acelerar",
-        "code": "ASCENT / SIGNAL",
-        "label": "Conexão dos sinais",
-        "metric": "PERFORMANCE / PRODUTO / OPERAÇÃO",
-        "description": "Conectar sinais de performance, produto e operação para ganhar altitude com direção.",
-        "signals": ["Evolução", "Comportamento", "Contexto operacional"],
-        "result": "Uma leitura integrada que mostra o que mudou, por quê e onde agir."
+        "id": "setup",
+        "title": "Setup",
+        "code": "02",
+        "label": "Campanha no ar",
+        "metric": "PLATAFORMA / ORÇAMENTO / PÚBLICO",
+        "description": "Configuração da campanha na plataforma certa pro seu produto e público.",
+        "signals": [
+          "Escolha da plataforma (ML Ads, Shopee Ads ou Meta Ads)",
+          "Definição de orçamento inicial",
+          "Segmentação do público certo"
+        ],
+        "result": "Campanha ativa e alinhada com seu objetivo de venda."
       },
       {
-        "id": "orbita",
-        "title": "Entrar em órbita",
-        "code": "ORBIT / DECISION",
-        "label": "Decisão e aprendizado",
-        "metric": "CLAREZA / AÇÃO / APRENDIZADO",
-        "description": "Transformar a trajetória em uma decisão clara, acionável e pronta para evoluir.",
-        "signals": ["Prioridade", "Próxima ação", "Ciclo de aprendizado"],
-        "result": "Uma decisão que pode ser executada, medida e aprimorada."
+        "id": "gestao",
+        "title": "Gestão",
+        "code": "03",
+        "label": "Otimização contínua",
+        "metric": "REVISÃO / AJUSTE / COMUNICAÇÃO",
+        "description": "Acompanhamento semanal com ajustes de orçamento, palavra-chave e posicionamento.",
+        "signals": [
+          "Revisão semanal de performance",
+          "Ajuste de investimento por resultado",
+          "Comunicação direta sobre mudanças"
+        ],
+        "result": "A campanha melhora com o tempo, não fica parada."
+      },
+      {
+        "id": "resultado",
+        "title": "Resultado",
+        "code": "04",
+        "label": "Prova em número",
+        "metric": "VISITA / CONVERSÃO / VENDA",
+        "description": "Relatório simples mostrando visita, conversão e venda gerada pelos anúncios.",
+        "signals": [
+          "Relatório mensal em linguagem clara",
+          "Comparativo antes/depois",
+          "Recomendação pro próximo ciclo"
+        ],
+        "result": "Você enxerga o retorno real do investimento em tráfego."
       }
     ]
   },
   "visualStory": {
-    "wideEyebrow": "Do panorama ao detalhe",
-    "wideTitle": "Leitura executiva na superfície. Evidência disponível em profundidade.",
+    "wideEyebrow": "A estratégia começa no anúncio",
+    "wideTitle": "Tráfego, oferta e conversão precisam trabalhar juntos.",
     "wideMedia": "media/performance-wide.jpg",
     "wideAlt": "Fachada modernista com ritmo geométrico e céu aberto.",
-    "splitEyebrow": "Camadas de análise",
-    "splitTitle": "Cada movimento revela uma parte da decisão.",
+    "splitEyebrow": "Gestão de campanhas",
+    "splitTitle": "Cada ajuste parte do que os dados mostram.",
     "largeMedia": "media/project-launch.jpg",
     "largeAlt": "Túnel de concreto com perspectiva profunda.",
     "smallMedia": "media/project-discovery.jpg",
-    "smallAlt": "Corredor iluminado por uma claraboia."
+    "smallAlt": "Corredor iluminado por uma claraboia.",
+    "splitSupport": "Leitura de visitas, conversão e vendas para priorizar as ações que fazem sentido para a sua operação."
   },
   "capabilities": {
-    "eyebrow": "Frentes de atuação",
-    "title": "Quatro competências trabalhando como um único sistema.",
+    "eyebrow": "Onde anunciamos",
+    "title": "A estratégia acompanha o produto e o marketplace.",
     "items": [
       {
-        "title": "Diagnóstico",
+        "title": "Mercado Livre Ads",
         "kicker": "01",
         "media": "media/project-commerce.jpg",
-        "description": "Investigo regras, fontes e inconsistências antes de transformar dados em conclusão."
+        "description": "Campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
       },
       {
-        "title": "Performance",
+        "title": "Shopee Ads",
         "kicker": "02",
         "media": "media/hero.jpg",
-        "description": "Construo leituras que conectam evolução, participação, metas e comportamento comercial."
+        "description": "Ajustes de campanha para apresentar seus produtos às pessoas com maior intenção de compra."
       },
       {
-        "title": "Produto",
+        "title": "Magalu Ads",
         "kicker": "03",
         "media": "media/project-launch.jpg",
-        "description": "Organizo fluxos, estados e prioridades para criar ferramentas úteis no trabalho real."
+        "description": "Estrutura de anúncios orientada ao catálogo, ao público e ao orçamento disponível."
       },
       {
-        "title": "Narrativa",
+        "title": "Meta Ads",
         "kicker": "04",
         "media": "media/project-discovery.jpg",
-        "description": "Traduzo complexidade em interfaces que sustentam leitura executiva e aprofundamento."
+        "description": "Quando fizer sentido, campanhas para atrair público e apoiar a jornada de compra."
       }
     ]
   },
   "projectsSection": {
-    "eyebrow": "Projetos selecionados",
-    "title": "Produtos reais para decisões reais."
+    "eyebrow": "Resultados",
+    "title": "Uma simulação ilustrativa, sem promessas de resultado."
   },
   "projects": [
     {
-      "title": "Launch Analysis v2",
-      "category": "Performance de lançamentos",
+      "title": "Simulação: pequeno vendedor de marketplace",
+      "category": "Cenário ilustrativo",
       "media": "media/project-launch.jpg",
-      "alt": "Estrutura em concreto conduzindo o olhar em profundidade.",
-      "summary": "Dashboard estático que organiza a performance de lançamentos, conecta snapshots versionados e preserva regras auditáveis de venda.",
-      "tags": ["Produto", "BigQuery", "Apps Script", "Vercel"],
-      "href": "https://launch-analysis-v2.vercel.app",
-      "cta": "Abrir projeto"
-    },
-    {
-      "title": "Panorama Comercial",
-      "category": "Inteligência comercial",
-      "media": "media/project-commerce.jpg",
-      "alt": "Arquitetura de concreto contra um céu azul intenso.",
-      "summary": "Leitura executiva de doze meses fechados, com receita, pedidos, ticket, mix, formação do pedido e comportamento comercial.",
-      "tags": ["Dados", "Comercial", "Dashboard", "SSOT"],
-      "href": "https://github.com/PauloCastroDomingues/Panorama-Comercial",
-      "cta": "Ver repositório"
-    },
-    {
-      "title": "Análises Sazonais",
-      "category": "Comportamento de compra",
-      "media": "media/performance-wide.jpg",
-      "alt": "Fachada geométrica sob luz natural.",
-      "summary": "Dashboard da Black 2025 para analisar linhas, faixas de valor, acessórios, brindes, recorrência e padrões de compra.",
-      "tags": ["Forecast", "Sazonalidade", "Vendas", "Vercel"],
-      "href": "https://analises-sazonais.vercel.app",
-      "cta": "Abrir análise"
-    },
-    {
-      "title": "Interview Mapper",
-      "category": "Discovery e processos",
-      "media": "media/project-discovery.jpg",
-      "alt": "Corredor industrial com luz e linhas de perspectiva.",
-      "summary": "Workspace para entrevistas de processos, mapa AS-IS/TO-BE, decisões, maturidade do discovery e backlog estruturado.",
-      "tags": ["Product Ops", "Discovery", "Processos", "React"],
-      "href": "https://github.com/PauloCastroDomingues/interview-mapper",
-      "cta": "Ver repositório"
+      "alt": "Imagem ilustrativa de uma análise de tráfego para marketplace",
+      "summary": "Cenário típico de vendedor pequeno em marketplace: de anúncio parado a crescimento de visita e conversão com gestão de tráfego pago. Baseado em experiência prévia com gestão de campanhas de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop).",
+      "tags": [
+        "Tráfego pago",
+        "Marketplace",
+        "Simulação"
+      ],
+      "href": "",
+      "cta": "Ver como funciona"
     }
   ],
   "metrics": {
-    "number": "07",
-    "label": "projetos públicos conectando dados, operação e produto",
+    "number": "04",
+    "label": "etapas claras, do diagnóstico ao acompanhamento",
     "items": [
-      "Dashboards executivos e sistemas de análise",
-      "Produtos para performance comercial e discovery",
-      "Decisões sustentadas por fontes e regras explícitas"
+      "Diagnóstico da conta e dos anúncios",
+      "Configuração alinhada ao produto e ao público",
+      "Otimização semanal das campanhas",
+      "Relatório claro e próximos passos"
     ]
   },
   "contact": {
-    "eyebrow": "Próximo movimento",
-    "title": "Vamos transformar complexidade em direção.",
-    "primaryLabel": "Ver perfil no GitHub",
-    "primaryHref": "https://github.com/PauloCastroDomingues",
+    "eyebrow": "Próximo passo",
+    "title": "Vamos olhar juntos para o que pode melhorar nos seus anúncios.",
+    "primaryLabel": "Falar no WhatsApp",
+    "primaryHref": "https://wa.me/5516991485154",
     "secondaryLabel": "Voltar ao início",
     "secondaryHref": "#inicio"
   },
   "footer": {
     "signature": "Paulo Castro Domingues",
-    "note": "Performance, dados e produto.",
-    "sourceLabel": "Código no GitHub",
-    "sourceHref": "https://github.com/PauloCastroDomingues/portifolio"
+    "note": "Gestão de tráfego pago para marketplaces.",
+    "sourceLabel": "Falar no WhatsApp",
+    "sourceHref": "https://wa.me/5516991485154"
+  },
+  "about": {
+    "title": "Quem cuida da sua campanha",
+    "text": "Experiência prática com gestão de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop) e análise de dados (BigQuery, GA4, Meta Ads). Sem promessa vazia — diagnóstico real antes de qualquer investimento."
   }
 }
