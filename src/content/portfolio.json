@@ -157,19 +157,19 @@
       {
         "title": "Mercado Livre Ads",
         "kicker": "01",
-        "media": "media/marketplace-footwear.jpg",
+        "media": "media/performance-dashboard.jpg",
         "description": "Campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
       },
       {
         "title": "Shopee Ads",
         "kicker": "02",
-        "media": "media/marketplace-cosmetics.jpg",
+        "media": "media/performance-review.jpg",
         "description": "Ajustes de campanha para apresentar seus produtos às pessoas com maior intenção de compra."
       },
       {
         "title": "Magalu Ads",
         "kicker": "03",
-        "media": "media/marketplace-seller.jpg",
+        "media": "media/performance-report.jpg",
         "description": "Estrutura de anúncios orientada ao catálogo, ao público e ao orçamento disponível."
       },
       {
@@ -188,8 +188,8 @@
     {
       "title": "Simulação: pequeno vendedor de marketplace",
       "category": "Cenário ilustrativo",
-      "media": "media/marketplace-workspace.jpg",
-      "alt": "Imagem ilustrativa de produto e painel de dados para representar uma simulacao de gestao de trafego.",
+      "media": "media/marketplace-seller.jpg",
+      "alt": "Vendedora preparando pedidos de uma loja online em uma imagem ilustrativa de cenario, nao de um case real.",
       "summary": "Cenário típico de vendedor pequeno em marketplace: de anúncio parado a crescimento de visita e conversão com gestão de tráfego pago. Baseado em experiência prévia com gestão de campanhas de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop).",
       "tags": [
         "Tráfego pago",
