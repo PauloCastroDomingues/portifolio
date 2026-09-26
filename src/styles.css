@@ -2104,38 +2104,30 @@ h2 {
 }
 
 .expanding-cards { display: none; }
-.channel-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-.channel-card {
-  min-width: 0;
-  border: 1px solid var(--gray-100);
-  background: var(--paper);
-}
-.channel-card .card-image { aspect-ratio: 1.75; }
-.channel-card .card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: none;
-  transition: transform 400ms ease;
-}
-.channel-card:hover .card-image img { transform: scale(1.035); }
+.carousel-hint { max-width: 31ch; margin: 0 0 4px; color: var(--gray-700); line-height: 1.55; }
+.channel-carousel { position: relative; }
+.channel-track { display: flex; gap: 20px; overflow-x: auto; padding: 10px max(4px, calc((100% - 1120px) / 2)) 24px; margin-inline: -4px; scroll-snap-type: x mandatory; scroll-padding-inline: 30%; scrollbar-width: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.channel-track::-webkit-scrollbar { display: none; }
+.channel-card { flex: 0 0 clamp(310px, 47vw, 560px); min-width: 0; overflow: hidden; border: 1px solid var(--gray-100); border-radius: 5px; background: var(--paper); scroll-snap-align: center; }
+.channel-card-image { height: auto; min-height: 0; aspect-ratio: 1.8; }
+.channel-card-image .parallax-img { height: 125%; filter: none; }
+.channel-card-image::after { background: linear-gradient(180deg, transparent 70%, rgba(10, 24, 43, .15)); }
 .channel-card-copy { padding: 22px 24px 25px; }
-.channel-card-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-  color: var(--coral);
-  font-size: 0.68rem;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-}
+.channel-card-meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: var(--coral); font-size: 0.68rem; font-weight: 850; letter-spacing: 0.06em; }
+.channel-card-meta span:last-child { color: var(--blue-deep); }
 .channel-card h3 { margin: 0 0 10px; font-size: 1.45rem; line-height: 1.1; }
 .channel-card p { max-width: 50ch; margin: 0; color: var(--gray-700); line-height: 1.55; }
+.channel-carousel-controls { display: flex; align-items: center; gap: 22px; padding-top: 8px; }
+.channel-carousel-buttons { display: flex; align-items: center; gap: 9px; }
+.carousel-arrow, .carousel-toggle { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--gray-300); border-radius: 999px; color: var(--blue-deep); background: transparent; cursor: pointer; transition: color 180ms ease, border-color 180ms ease, background 180ms ease; }
+.carousel-arrow:hover, .carousel-toggle:hover { color: var(--white); border-color: var(--blue-deep); background: var(--blue-deep); }
+.carousel-toggle { min-width: 92px; padding: 0 14px; font-size: 0.82rem; font-weight: 700; }
+.channel-carousel-dots { display: flex; align-items: center; gap: 8px; margin-inline: auto; }
+.channel-carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 99px; background: var(--gray-300); cursor: pointer; transition: width 240ms ease, background 240ms ease; }
+.channel-carousel-dots button[aria-current="true"] { width: 30px; background: var(--coral); }
+.carousel-count { color: var(--blue-deep); font-size: 0.82rem; font-weight: 850; font-variant-numeric: tabular-nums; }
+.carousel-count span { color: var(--gray-700); font-weight: 500; }
+.carousel-arrow:focus-visible, .carousel-toggle:focus-visible, .channel-carousel-dots button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
 
 .metric-number { font-size: clamp(9rem, 17vw, 15rem); }
 .metric-number-wrap p { max-width: 12ch; font-size: 1.12rem; }
@@ -2175,10 +2167,20 @@ h2 {
   .principle-card + .principle-card { padding: 21px 0 23px; border-left: 0; }
   .principle-card + .principle-card { border-top: 1px solid var(--gray-300); }
   .principle-card-meta { margin-bottom: 15px; }
-  .channel-grid { grid-template-columns: 1fr; gap: 14px; }
-  .channel-card .card-image { aspect-ratio: 1.8; }
+  .carousel-hint { margin-top: 2px; }
+  .channel-track { gap: 13px; padding: 8px 8px 18px; scroll-padding-inline: 8px; }
+  .channel-card { flex-basis: min(86vw, 390px); scroll-snap-align: start; }
+  .channel-card-image { aspect-ratio: 1.8; }
   .channel-card-copy { padding: 18px 18px 20px; }
   .channel-card h3 { font-size: 1.3rem; }
+  .channel-carousel-controls { gap: 12px; }
+  .channel-carousel-buttons { gap: 6px; }
+  .carousel-arrow { min-width: 40px; min-height: 40px; }
+  .carousel-toggle { min-width: 42px; width: 42px; padding: 0; }
+  .carousel-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .channel-carousel-dots { gap: 6px; }
+  .channel-carousel-dots button { width: 7px; height: 7px; }
+  .channel-carousel-dots button[aria-current="true"] { width: 22px; }
   .campaign-journey-visual { padding: 18px; }
   .campaign-journey-list { margin-block: 18px; }
   .campaign-journey-list li { min-height: 61px; }
@@ -2187,3 +2189,5 @@ h2 {
   .metric-number { font-size: 8rem; }
   .metric-number-wrap p { max-width: 20ch; }
 }
+
+@media (prefers-reduced-motion: reduce) { .channel-track { scroll-behavior: auto; } .channel-carousel-dots button, .carousel-arrow, .carousel-toggle { transition: none; } }
