@@ -1,5 +1,5 @@
 import { ArrowDownRight } from "lucide-react";
-import { content } from "../data/content";
+import { content, photos } from "../data/content";
 
 export function About() {
   return (
@@ -9,6 +9,10 @@ export function About() {
           <p className="section-kicker">Sobre</p>
           <h2>{content.about.title}</h2>
         </div>
+        <figure className="about-portrait">
+          <img src={photos.about} alt={content.about.mediaAlt} loading="lazy" />
+          <figcaption>{content.identity.name}</figcaption>
+        </figure>
         <div className="about-copy">
           <p>{content.about.text}</p>
           <a className="text-link" href={content.contact.primaryHref} target="_blank" rel="noreferrer">

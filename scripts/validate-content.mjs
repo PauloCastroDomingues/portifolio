@@ -25,6 +25,7 @@ const invalidStorySteps = (content.story?.steps ?? []).flatMap((step, index) =>
 const media = [
   content.site?.ogImage,
   content.hero?.media,
+  content.about?.media,
   content.visualStory?.wideMedia,
   content.visualStory?.largeMedia,
   content.visualStory?.smallMedia,

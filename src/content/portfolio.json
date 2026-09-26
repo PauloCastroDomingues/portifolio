@@ -225,6 +225,8 @@
   },
   "about": {
     "title": "Quem cuida da sua campanha",
+    "media": "media/paulo-profile.jpg",
+    "mediaAlt": "Paulo Castro Domingues, gestor de tr?fego para marketplaces",
     "text": "Sou Paulo, atuo com marketing analytics e dados na Reise, uma marca de calçados DTC, trabalhando direto com BigQuery, GA4, Shopify e mídia paga (Meta Ads, Google). Antes disso, passei por operação de marketplace de verdade — Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo — cuidando de campanha, catálogo e estoque na prática, não só na teoria. Formado em Análise e Desenvolvimento de Sistemas, uso dado real pra decidir onde investir, não achismo."
   }
 }

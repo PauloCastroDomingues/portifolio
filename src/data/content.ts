@@ -17,6 +17,7 @@ export const panelStats = portfolioContent.metrics.items;
 
 export const photos = {
   hero: mediaUrl(portfolioContent.hero.media),
+  about: mediaUrl(portfolioContent.about.media),
   wide: mediaUrl(portfolioContent.visualStory.wideMedia),
   splitLarge: mediaUrl(portfolioContent.visualStory.largeMedia),
   splitSmall: mediaUrl(portfolioContent.visualStory.smallMedia),
