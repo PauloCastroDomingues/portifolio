@@ -139,15 +139,16 @@
   "visualStory": {
     "wideEyebrow": "A estratégia começa no anúncio",
     "wideTitle": "Tráfego, oferta e conversão precisam trabalhar juntos.",
-    "wideMedia": "media/campaign-dashboard.jpg",
-    "wideAlt": "Tela conceitual de analise de campanhas e indicadores em um notebook.",
+    "wideMedia": "media/performance-dashboard.jpg",
+    "wideAlt": "Painel de desempenho com graficos e indicadores digitais em uma tela.",
     "splitEyebrow": "Gestão de campanhas",
     "splitTitle": "Cada ajuste parte do que os dados mostram.",
-    "largeMedia": "media/marketplace-footwear.jpg",
-    "largeAlt": "Tenis em fotografia de produto para ilustrar um anuncio em marketplace.",
-    "smallMedia": "media/marketplace-workspace.jpg",
-    "smallAlt": "Notebook com painel de dados em uma mesa de trabalho.",
-    "splitSupport": "Leitura de visitas, conversão e vendas para priorizar as ações que fazem sentido para a sua operação."
+    "largeMedia": "media/performance-review.jpg",
+    "largeAlt": "Tela com indicadores de campanhas analisados em um notebook.",
+    "smallMedia": "media/performance-report.jpg",
+    "smallAlt": "Relatorio digital com graficos e anotacoes de acompanhamento.",
+    "splitSupport": "Leitura de visitas, conversão e vendas para priorizar as ações que fazem sentido para a sua operação.",
+    "performanceNote": "Painéis e relatórios ilustrativos. Resultados reais entram aqui quando houver dados comprovados."
   },
   "capabilities": {
     "eyebrow": "Onde anunciamos",

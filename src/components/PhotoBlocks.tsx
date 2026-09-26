@@ -1,4 +1,4 @@
-import { content, photos } from "../data/content";
+﻿import { content, photos } from "../data/content";
 import { ParallaxImage } from "./ParallaxImage";
 
 export function PhotoBlocks() {
@@ -22,6 +22,7 @@ export function PhotoBlocks() {
           <p className="split-support">
             {visual.splitSupport}
           </p>
+          <p className="performance-note">{visual.performanceNote}</p>
         </div>
         <ParallaxImage
           className="split-photo-large"
@@ -39,3 +40,4 @@ export function PhotoBlocks() {
     </section>
   );
 }
+

@@ -1331,6 +1331,16 @@ h2 {
   line-height: 1.55;
 }
 
+.performance-note {
+  max-width: 38ch;
+  margin: 14px 0 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--coral);
+  color: var(--gray-700);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 .split-photo-large {
   grid-column: 6 / span 5;
   aspect-ratio: 0.78;

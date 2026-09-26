@@ -7,3 +7,6 @@
 - marketplace-workspace.jpg — Blake Wisz, Unsplash: https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-table-PtA6JRXWM1c
 
 Imagens disponíveis sob a licença Unsplash. São imagens ilustrativas e não representam clientes, produtos atendidos, nem resultados obtidos por Paulo.
+- performance-dashboard.jpg — Stephen Dawson, Unsplash: https://unsplash.com/photos/turned-on-monitoring-screen-qwtCeJ5cLYs
+- performance-review.jpg — Walls.io, Unsplash: https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-next-to-a-plant-OUysfcaqT3s
+- performance-report.jpg — nicoll camacho, Unsplash: https://unsplash.com/photos/laptop-displaying-charts-next-to-notebook-and-mug-adFE-OdO7RA
