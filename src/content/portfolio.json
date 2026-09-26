@@ -4,7 +4,7 @@
     "description": "Gestão de tráfego pago para Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, acompanhamento de campanhas e análise de resultados.",
     "url": "https://portifolio-gamma-seven-71.vercel.app/",
     "themeColor": "#fffaf2",
-    "ogImage": "media/hero.jpg"
+    "ogImage": "media/marketplace-seller.jpg"
   },
   "identity": {
     "name": "Paulo Castro Domingues",
@@ -48,8 +48,8 @@
     "primaryCta": "Falar agora",
     "primaryHref": "https://wa.me/5516991485154",
     "secondaryCta": "Como funciona",
-    "media": "media/hero.jpg",
-    "mediaAlt": "Arquitetura de vidro com linhas verticais e reflexos azuis."
+    "media": "media/marketplace-seller.jpg",
+    "mediaAlt": "Empreendedora conferindo pedidos e produtos da loja online."
   },
   "ticker": [
     "MERCADO LIVRE ADS",
@@ -139,14 +139,14 @@
   "visualStory": {
     "wideEyebrow": "A estratégia começa no anúncio",
     "wideTitle": "Tráfego, oferta e conversão precisam trabalhar juntos.",
-    "wideMedia": "media/performance-wide.jpg",
-    "wideAlt": "Fachada modernista com ritmo geométrico e céu aberto.",
+    "wideMedia": "media/campaign-dashboard.jpg",
+    "wideAlt": "Tela conceitual de analise de campanhas e indicadores em um notebook.",
     "splitEyebrow": "Gestão de campanhas",
     "splitTitle": "Cada ajuste parte do que os dados mostram.",
-    "largeMedia": "media/project-launch.jpg",
-    "largeAlt": "Túnel de concreto com perspectiva profunda.",
-    "smallMedia": "media/project-discovery.jpg",
-    "smallAlt": "Corredor iluminado por uma claraboia.",
+    "largeMedia": "media/marketplace-footwear.jpg",
+    "largeAlt": "Tenis em fotografia de produto para ilustrar um anuncio em marketplace.",
+    "smallMedia": "media/marketplace-workspace.jpg",
+    "smallAlt": "Notebook com painel de dados em uma mesa de trabalho.",
     "splitSupport": "Leitura de visitas, conversão e vendas para priorizar as ações que fazem sentido para a sua operação."
   },
   "capabilities": {
@@ -156,25 +156,25 @@
       {
         "title": "Mercado Livre Ads",
         "kicker": "01",
-        "media": "media/project-commerce.jpg",
+        "media": "media/marketplace-footwear.jpg",
         "description": "Campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
       },
       {
         "title": "Shopee Ads",
         "kicker": "02",
-        "media": "media/hero.jpg",
+        "media": "media/marketplace-cosmetics.jpg",
         "description": "Ajustes de campanha para apresentar seus produtos às pessoas com maior intenção de compra."
       },
       {
         "title": "Magalu Ads",
         "kicker": "03",
-        "media": "media/project-launch.jpg",
+        "media": "media/marketplace-seller.jpg",
         "description": "Estrutura de anúncios orientada ao catálogo, ao público e ao orçamento disponível."
       },
       {
         "title": "Meta Ads",
         "kicker": "04",
-        "media": "media/project-discovery.jpg",
+        "media": "media/campaign-dashboard.jpg",
         "description": "Quando fizer sentido, campanhas para atrair público e apoiar a jornada de compra."
       }
     ]
@@ -187,8 +187,8 @@
     {
       "title": "Simulação: pequeno vendedor de marketplace",
       "category": "Cenário ilustrativo",
-      "media": "media/project-launch.jpg",
-      "alt": "Imagem ilustrativa de uma análise de tráfego para marketplace",
+      "media": "media/marketplace-workspace.jpg",
+      "alt": "Imagem ilustrativa de produto e painel de dados para representar uma simulacao de gestao de trafego.",
       "summary": "Cenário típico de vendedor pequeno em marketplace: de anúncio parado a crescimento de visita e conversão com gestão de tráfego pago. Baseado em experiência prévia com gestão de campanhas de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop).",
       "tags": [
         "Tráfego pago",
@@ -226,7 +226,7 @@
   "about": {
     "title": "Quem cuida da sua campanha",
     "media": "media/paulo-profile.jpg",
-    "mediaAlt": "Paulo Castro Domingues, gestor de tr?fego para marketplaces",
+    "mediaAlt": "Paulo Castro Domingues, gestor de trafego para marketplaces.",
     "text": "Sou Paulo, atuo com marketing analytics e dados na Reise, uma marca de calçados DTC, trabalhando direto com BigQuery, GA4, Shopify e mídia paga (Meta Ads, Google). Antes disso, passei por operação de marketplace de verdade — Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo — cuidando de campanha, catálogo e estoque na prática, não só na teoria. Formado em Análise e Desenvolvimento de Sistemas, uso dado real pra decidir onde investir, não achismo."
   }
 }
