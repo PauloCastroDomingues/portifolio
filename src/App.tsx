@@ -1,4 +1,5 @@
 import { DebugPanel } from "./components/DebugPanel";
+import { FloatingCta } from "./components/FloatingCta";
 import { About } from "./components/About";
 import { ExpandingCards } from "./components/ExpandingCards";
 import { ExpandingPanel } from "./components/ExpandingPanel";
@@ -31,6 +32,7 @@ function Page() {
         <ExpandingPanel />
       </main>
       <FooterReveal />
+      <FloatingCta />
       <DebugPanel />
     </>
   );

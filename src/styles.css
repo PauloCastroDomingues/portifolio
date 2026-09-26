@@ -2183,3 +2183,92 @@ h2 {
   .about-grid { gap: 24px; }
   .about-copy p { font-size: 1.2rem; }
 }
+
+
+/* Marketplace-focused colors, shorter sections, and stronger contact actions */
+:root {
+  --blue: #1f4f99;
+  --blue-deep: #15386f;
+  --signal: #ffc400;
+  --coral: #ef5a28;
+  --paper: #fffaf2;
+}
+
+.button-dark,
+.header-cta {
+  background: var(--coral);
+  color: var(--white);
+  box-shadow: 0 8px 22px rgba(190, 62, 24, 0.2);
+}
+.button-dark { min-height: 52px; padding-inline: 24px; border-radius: 5px; }
+.header-cta { border-radius: 5px; }
+.button-dark:hover,
+.header-cta:hover { background: #d8461b; }
+.hero-actions .text-link,
+.about-copy .text-link { color: var(--blue-deep); }
+
+.story { min-height: auto; }
+.story-pin { min-height: auto; }
+.story-grid {
+  grid-template-rows: auto auto;
+  min-height: auto;
+  padding: 76px 0;
+}
+.story-copy h2 { max-width: 14ch; font-size: clamp(2.5rem, 4vw, 4rem); }
+.testimonial-grid { padding: 76px 0 88px; }
+.wide-photo { min-height: 68svh; }
+.split-photo { padding: 88px 0 104px; }
+.cards-section { padding: 92px 0 104px; }
+.projects { padding: 92px 0 104px; }
+.project-grid { gap: 48px var(--grid-gap); }
+.metric-section { min-height: auto; padding: 76px 0; }
+.metric-panel,
+.metric-panel-inner { min-height: 500px; }
+.metric-panel-inner { gap: 48px; padding: 52px; }
+.closing-panel { min-height: 54svh; }
+.about-grid { padding: 82px 0; }
+.floating-cta {
+  position: fixed;
+  z-index: 42;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 22px;
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--white);
+  box-shadow: 0 10px 34px rgba(8, 11, 16, 0.24);
+  font-weight: 900;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+.floating-cta:hover { transform: translateY(-3px); background: #d8461b; }
+
+@media (max-width: 1080px) {
+  .story-grid { padding: 66px 0; }
+  .metric-section { padding: 64px 0; }
+  .metric-panel,
+  .metric-panel-inner { min-height: 480px; }
+  .about-grid { padding: 68px 0; }
+}
+
+@media (max-width: 640px) {
+  .wide-photo { min-height: 540px; }
+  .split-photo { padding: 64px 0 76px; }
+  .testimonial-grid { padding: 62px 0 72px; }
+  .story-grid { padding: 62px 0; }
+  .cards-section,
+  .projects { padding: 72px 0 82px; }
+  .project-grid { gap: 44px; }
+  .metric-section { padding: 50px 0; }
+  .metric-panel,
+  .metric-panel-inner { min-height: 440px; }
+  .metric-panel-inner { padding: 30px 24px; }
+  .closing-panel { min-height: 520px; }
+  .about-grid { padding: 62px 0; }
+  .floating-cta { right: 14px; bottom: 14px; min-height: 50px; padding-inline: 18px; }
+}

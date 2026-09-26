@@ -180,8 +180,8 @@
     ]
   },
   "projectsSection": {
-    "eyebrow": "Resultados",
-    "title": "Uma simulação ilustrativa, sem promessas de resultado."
+    "eyebrow": "Exemplo ilustrativo",
+    "title": "Resultados reais entram aqui conforme forem comprovados."
   },
   "projects": [
     {
@@ -225,6 +225,6 @@
   },
   "about": {
     "title": "Quem cuida da sua campanha",
-    "text": "Experiência prática com gestão de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop) e análise de dados (BigQuery, GA4, Meta Ads). Sem promessa vazia — diagnóstico real antes de qualquer investimento."
+    "text": "Sou Paulo, atuo com marketing analytics e dados na Reise, uma marca de calçados DTC, trabalhando direto com BigQuery, GA4, Shopify e mídia paga (Meta Ads, Google). Antes disso, passei por operação de marketplace de verdade — Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo — cuidando de campanha, catálogo e estoque na prática, não só na teoria. Formado em Análise e Desenvolvimento de Sistemas, uso dado real pra decidir onde investir, não achismo."
   }
 }
