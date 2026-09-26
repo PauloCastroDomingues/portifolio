@@ -1,6 +1,5 @@
 ﻿Fotografias utilizadas nas imagens conceituais do portfólio:
 
-- marketplace-seller.jpg — Rifki Kurniawan, Unsplash: https://unsplash.com/photos/woman-checking-package-with-phone-near-laptop-and-boxes-k63Or81F8-M
 - campaign-dashboard.jpg — Swello, Unsplash: https://unsplash.com/photos/a-laptop-screen-displays-data-analytics-charts-and-statistics-fDisDvdiqrQ
 
 Imagens disponíveis sob a licença Unsplash. São imagens ilustrativas e não representam clientes, produtos atendidos, nem resultados obtidos por Paulo.

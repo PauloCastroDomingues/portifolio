@@ -38,7 +38,7 @@ export function Projects() {
             <p className="section-kicker">{content.projectsSection.eyebrow}</p>
             <h2>{content.projectsSection.title}</h2>
           </div>
-          <span>{projects.length === 1 ? "SIMULAÇÃO" : `${String(projects.length).padStart(2, "0")} CASES`}</span>
+          <span>{projects.length === 1 ? "ENTREGA" : String(projects.length).padStart(2, "0") + " ENTREGAS"}</span>
         </div>
         <div className="project-grid">
           {projects.map((project, index) => {

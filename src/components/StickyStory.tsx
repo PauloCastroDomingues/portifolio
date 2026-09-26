@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { RocketLaunchDiagram } from "./RocketLaunchDiagram";
+import { CampaignJourneyDiagram } from "./CampaignJourneyDiagram";
 import { content, storySteps } from "../data/content";
 import { useMotion } from "../motion/useMotion";
 
@@ -49,16 +49,10 @@ export function StickyStory() {
             <h2>{content.story.title}</h2>
           </div>
 
-          <div className="story-visual" aria-label="Etapas da gestão de tráfego pago">
-            <span className="story-visual-label">{storySteps[active].code}</span>
-            <span className="story-scanline" aria-hidden="true" />
+          <div className="story-visual" aria-label="Fluxo de gest?o de campanhas">
             <div className="story-visual-inner">
-              <RocketLaunchDiagram activeIndex={active} />
+              <CampaignJourneyDiagram activeIndex={active} />
             </div>
-            <span className="story-visual-metric">{storySteps[active].metric}</span>
-            <span className="story-visual-index" aria-hidden="true">
-              {String(active + 1).padStart(2, "0")} / {String(storySteps.length).padStart(2, "0")}
-            </span>
           </div>
 
           <div className="story-narrative">
@@ -103,7 +97,7 @@ export function StickyStory() {
                     {step.signals.map((signal) => <li key={signal}>{signal}</li>)}
                   </ul>
                   <div className="story-stage-result">
-                    <span>RESULTADO</span>
+                    <span>AO FINAL</span>
                     <strong>{step.result}</strong>
                   </div>
                 </article>

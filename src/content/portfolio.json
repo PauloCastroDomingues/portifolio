@@ -1,10 +1,10 @@
 {
   "site": {
     "title": "Paulo Castro | Tráfego pago para marketplaces",
-    "description": "Gestão de tráfego pago para Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, acompanhamento de campanhas e análise de resultados.",
+    "description": "Gestão de anúncios para Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, decisões guiadas por dados e acompanhamento próximo.",
     "url": "https://portifolio-gamma-seven-71.vercel.app/",
     "themeColor": "#fffaf2",
-    "ogImage": "media/marketplace-seller.jpg"
+    "ogImage": "media/performance-dashboard.jpg"
   },
   "identity": {
     "name": "Paulo Castro Domingues",
@@ -25,7 +25,7 @@
     },
     {
       "id": "projetos",
-      "label": "Resultados"
+      "label": "Diagnóstico"
     },
     {
       "id": "sobre",
@@ -37,134 +37,127 @@
     }
   ],
   "hero": {
-    "eyebrow": "Tráfego pago para marketplaces",
-    "headline": "Seu anúncio no marketplace pode vender mais",
+    "eyebrow": "GESTÃO DE ANÚNCIOS PARA MARKETPLACES",
+    "headline": "Invista com mais clareza em anúncios de marketplace",
     "titleLines": [
-      "Seu anúncio no",
-      "marketplace pode",
-      "vender mais"
+      "Invista com",
+      "mais clareza."
     ],
-    "intro": "Gestão de tráfego pago pra Mercado Livre, Shopee e Magalu. Diagnóstico gratuito, sem contrato engessado.",
-    "primaryCta": "Falar agora",
-    "primaryHref": "https://wa.me/5516991485154",
-    "secondaryCta": "Como funciona",
-    "media": "media/marketplace-seller.jpg",
-    "mediaAlt": "Empreendedora conferindo pedidos e produtos da loja online."
+    "intro": "Gestão de campanhas no Mercado Livre, Shopee e Magalu, com decisões orientadas por dados e acompanhamento próximo.",
+    "primaryCta": "Pedir diagnóstico gratuito",
+    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
+    "secondaryCta": "Conhecer o processo",
+    "media": "media/performance-dashboard.jpg",
+    "mediaAlt": "Painel de desempenho de campanhas em uma tela de notebook."
   },
-  "ticker": [
-    "MERCADO LIVRE ADS",
-    "SHOPEE ADS",
-    "MAGALU ADS",
-    "OTIMIZAÇÃO"
-  ],
   "principles": [
     {
-      "title": "Sem promessa de venda garantida.",
-      "body": "Cada conta tem um contexto. O diagnóstico mostra oportunidades e limites antes de qualquer investimento.",
-      "label": "Transparência 01"
+      "title": "Expectativas alinhadas desde o início.",
+      "body": "A análise mostra oportunidades, gargalos e limites da conta antes de qualquer mudança no investimento.",
+      "label": "TRANSPARÊNCIA"
     },
     {
-      "title": "Seu investimento precisa de acompanhamento.",
-      "body": "Orçamento, palavras-chave e posicionamentos são revistos com base no desempenho da campanha.",
-      "label": "Gestão 02"
+      "title": "Seu investimento recebe acompanhamento.",
+      "body": "Orçamento, termos de busca e posicionamentos são revistos para orientar os próximos ajustes.",
+      "label": "GESTÃO"
     },
     {
-      "title": "Relatórios para decidir com clareza.",
-      "body": "Visitas, conversão e vendas em uma leitura simples, com recomendações para o próximo ciclo.",
-      "label": "Análise 03"
+      "title": "Relatórios que ajudam a decidir.",
+      "body": "Visitas, conversão e vendas em uma leitura direta, junto com recomendações para o próximo ciclo.",
+      "label": "ANÁLISE"
     }
   ],
   "story": {
     "eyebrow": "Como funciona",
-    "title": "Da análise ao acompanhamento, com clareza em cada etapa.",
+    "title": "Da análise ao próximo ajuste, com clareza em cada etapa.",
     "steps": [
       {
         "id": "diagnostico",
         "title": "Diagnóstico",
         "code": "01",
-        "label": "Onde está o gargalo",
+        "label": "Entender o cenário",
         "metric": "VISITAS / CONVERSÃO / POSIÇÃO",
-        "description": "Análise gratuita da sua conta e dos anúncios atuais pra entender por que o resultado não está aparecendo.",
+        "description": "Leitura da conta, dos anúncios e do contexto do produto para localizar oportunidades e gargalos.",
         "signals": [
-          "Leitura de visitas, conversão e posicionamento",
-          "Identificação do principal gargalo",
-          "Plano de ação simples, sem jargão"
+          "Visitas e conversão",
+          "Posição e relevância do anúncio",
+          "Oportunidades e limites da conta"
         ],
-        "result": "Você sabe exatamente o que está travando suas vendas."
+        "result": "Um panorama claro do que está acontecendo e do que vale investigar."
       },
       {
-        "id": "setup",
-        "title": "Setup",
+        "id": "planejamento",
+        "title": "Planejamento",
         "code": "02",
-        "label": "Campanha no ar",
-        "metric": "PLATAFORMA / ORÇAMENTO / PÚBLICO",
-        "description": "Configuração da campanha na plataforma certa pro seu produto e público.",
+        "label": "Definir a direção",
+        "metric": "OBJETIVO / ORÇAMENTO / CANAL",
+        "description": "Escolha do objetivo, do canal e de um investimento inicial coerente com o produto e a operação.",
         "signals": [
-          "Escolha da plataforma (ML Ads, Shopee Ads ou Meta Ads)",
-          "Definição de orçamento inicial",
-          "Segmentação do público certo"
+          "Plataforma e posicionamentos",
+          "Orçamento inicial",
+          "Critérios para acompanhar a campanha"
         ],
-        "result": "Campanha ativa e alinhada com seu objetivo de venda."
+        "result": "Um plano alinhado ao produto, ao canal e ao investimento disponível."
       },
       {
         "id": "gestao",
-        "title": "Gestão",
+        "title": "Acompanhamento",
         "code": "03",
-        "label": "Otimização contínua",
+        "label": "Observar e ajustar",
         "metric": "REVISÃO / AJUSTE / COMUNICAÇÃO",
-        "description": "Acompanhamento semanal com ajustes de orçamento, palavra-chave e posicionamento.",
+        "description": "Revisões periódicas dos anúncios e ajustes orientados pelo desempenho observado.",
         "signals": [
-          "Revisão semanal de performance",
-          "Ajuste de investimento por resultado",
-          "Comunicação direta sobre mudanças"
+          "Revisão de campanhas e termos",
+          "Ajustes de orçamento e posicionamento",
+          "Comunicação clara sobre as mudanças"
         ],
-        "result": "A campanha melhora com o tempo, não fica parada."
+        "result": "Você entende o que foi ajustado e por que cada decisão foi tomada."
       },
       {
-        "id": "resultado",
-        "title": "Resultado",
+        "id": "aprendizado",
+        "title": "Aprendizado",
         "code": "04",
-        "label": "Prova em número",
-        "metric": "VISITA / CONVERSÃO / VENDA",
-        "description": "Relatório simples mostrando visita, conversão e venda gerada pelos anúncios.",
+        "label": "Escolher o próximo passo",
+        "metric": "DADOS / APRENDIZADO / PRÓXIMA AÇÃO",
+        "description": "Leitura do ciclo para identificar o que os dados indicam e qual teste ou ajuste vem a seguir.",
         "signals": [
-          "Relatório mensal em linguagem clara",
-          "Comparativo antes/depois",
-          "Recomendação pro próximo ciclo"
+          "Resumo dos indicadores acompanhados",
+          "Comparação com o objetivo definido",
+          "Recomendação para o próximo ciclo"
         ],
-        "result": "Você enxerga o retorno real do investimento em tráfego."
+        "result": "Um próximo passo explicado com base no cenário da sua conta."
       }
     ]
   },
   "visualStory": {
-    "wideEyebrow": "A estratégia começa no anúncio",
-    "wideTitle": "Tráfego, oferta e conversão precisam trabalhar juntos.",
-    "wideMedia": "media/performance-dashboard.jpg",
-    "wideAlt": "Painel de desempenho com graficos e indicadores digitais em uma tela.",
-    "splitEyebrow": "Gestão de campanhas",
-    "splitTitle": "Cada ajuste parte do que os dados mostram.",
+    "wideEyebrow": "O que os dados ajudam a responder",
+    "wideTitle": "Atenção, visita e pedido: cada etapa conta.",
+    "wideMedia": "media/campaign-dashboard.jpg",
+    "wideAlt": "Painel de campanhas digitais apresentado em uma tela de computador.",
+    "splitEyebrow": "Acompanhamento de campanhas",
+    "splitTitle": "O investimento precisa de contexto, não de adivinhação.",
     "largeMedia": "media/performance-review.jpg",
-    "largeAlt": "Tela com indicadores de campanhas analisados em um notebook.",
+    "largeAlt": "Notebook aberto em um painel de análise de desempenho.",
     "smallMedia": "media/performance-report.jpg",
-    "smallAlt": "Relatorio digital com graficos e anotacoes de acompanhamento.",
-    "splitSupport": "Leitura de visitas, conversão e vendas para priorizar as ações que fazem sentido para a sua operação.",
-    "performanceNote": "Painéis e relatórios ilustrativos. Resultados reais entram aqui quando houver dados comprovados."
+    "smallAlt": "Relatório com gráficos de acompanhamento e anotações.",
+    "splitSupport": "Visitas, cliques, conversão e investimento ajudam a decidir o que manter, ajustar ou testar.",
+    "performanceNote": "Imagens de painéis são ilustrativas. Nenhum dado exibido representa resultado de cliente."
   },
   "capabilities": {
-    "eyebrow": "Onde anunciamos",
-    "title": "A estratégia acompanha o produto e o marketplace.",
+    "eyebrow": "Canais de atuação",
+    "title": "A estratégia muda conforme o canal, o produto e o objetivo.",
     "items": [
       {
         "title": "Mercado Livre Ads",
         "kicker": "01",
         "media": "media/performance-dashboard.jpg",
-        "description": "Campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
+        "description": "Gestão de campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
       },
       {
         "title": "Shopee Ads",
         "kicker": "02",
         "media": "media/performance-review.jpg",
-        "description": "Ajustes de campanha para apresentar seus produtos às pessoas com maior intenção de compra."
+        "description": "Ajustes de campanha para aproximar seus produtos das pessoas com maior intenção de compra."
       },
       {
         "title": "Magalu Ads",
@@ -176,45 +169,46 @@
         "title": "Meta Ads",
         "kicker": "04",
         "media": "media/campaign-dashboard.jpg",
-        "description": "Quando fizer sentido, campanhas para atrair público e apoiar a jornada de compra."
+        "description": "Campanhas complementares para atrair público e apoiar a jornada de compra, quando fizer sentido."
       }
     ]
   },
   "projectsSection": {
-    "eyebrow": "Exemplo ilustrativo",
-    "title": "Resultados reais entram aqui conforme forem comprovados."
+    "eyebrow": "O que você recebe",
+    "title": "Um diagnóstico para transformar números em próximo passo."
   },
   "projects": [
     {
-      "title": "Simulação: pequeno vendedor de marketplace",
-      "category": "Cenário ilustrativo",
-      "media": "media/marketplace-seller.jpg",
-      "alt": "Vendedora preparando pedidos de uma loja online em uma imagem ilustrativa de cenario, nao de um case real.",
-      "summary": "Cenário típico de vendedor pequeno em marketplace: de anúncio parado a crescimento de visita e conversão com gestão de tráfego pago. Baseado em experiência prévia com gestão de campanhas de marketplace (Mercado Livre, Shopee, Magalu, TikTok Shop).",
+      "title": "Leitura inicial da campanha",
+      "category": "Exemplo de entrega",
+      "media": "media/campaign-dashboard.jpg",
+      "alt": "Painel ilustrativo para explicar a análise de uma campanha, sem dados reais de cliente.",
+      "summary": "O diagnóstico organiza visitas, cliques, conversão e investimento, e termina com recomendações práticas. A análise considera os dados e o contexto da sua operação; não números inventados.",
       "tags": [
-        "Tráfego pago",
-        "Marketplace",
-        "Simulação"
+        "Visitas e cliques",
+        "Conversão",
+        "Investimento",
+        "Próximas ações"
       ],
-      "href": "",
+      "href": "#experiencia",
       "cta": "Ver como funciona"
     }
   ],
   "metrics": {
     "number": "04",
-    "label": "etapas claras, do diagnóstico ao acompanhamento",
+    "label": "sinais que ajudam a orientar cada decisão",
     "items": [
-      "Diagnóstico da conta e dos anúncios",
-      "Configuração alinhada ao produto e ao público",
-      "Otimização semanal das campanhas",
-      "Relatório claro e próximos passos"
+      "Visitas e cliques: o anúncio está atraindo atenção?",
+      "Conversão: as visitas avançam para pedidos?",
+      "Investimento: o orçamento está coerente com o objetivo?",
+      "Próxima ação: o que manter, ajustar ou testar?"
     ]
   },
   "contact": {
     "eyebrow": "Próximo passo",
-    "title": "Vamos olhar juntos para o que pode melhorar nos seus anúncios.",
-    "primaryLabel": "Falar no WhatsApp",
-    "primaryHref": "https://wa.me/5516991485154",
+    "title": "Quer entender o que está acontecendo com seus anúncios?",
+    "primaryLabel": "Pedir diagnóstico gratuito",
+    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
     "secondaryLabel": "Voltar ao início",
     "secondaryHref": "#inicio"
   },
@@ -222,12 +216,12 @@
     "signature": "Paulo Castro Domingues",
     "note": "Gestão de tráfego pago para marketplaces.",
     "sourceLabel": "Falar no WhatsApp",
-    "sourceHref": "https://wa.me/5516991485154"
+    "sourceHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios."
   },
   "about": {
-    "title": "Quem cuida da sua campanha",
+    "title": "Quem vai cuidar dos seus anúncios",
     "media": "media/paulo-profile.jpg",
-    "mediaAlt": "Paulo Castro Domingues, gestor de trafego para marketplaces.",
-    "text": "Sou Paulo, atuo com marketing analytics e dados na Reise, uma marca de calçados DTC, trabalhando direto com BigQuery, GA4, Shopify e mídia paga (Meta Ads, Google). Antes disso, passei por operação de marketplace de verdade — Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo — cuidando de campanha, catálogo e estoque na prática, não só na teoria. Formado em Análise e Desenvolvimento de Sistemas, uso dado real pra decidir onde investir, não achismo."
+    "mediaAlt": "Paulo Castro Domingues, gestor de tráfego para marketplaces.",
+    "text": "Sou Paulo, formado em Análise e Desenvolvimento de Sistemas. Hoje atuo com dados e mídia paga na Reise. Também passei pela operação de vendedores em Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo, cuidando de campanhas, catálogo e estoque. Uno essa vivência prática à análise de dados para explicar cada decisão e acompanhar seu investimento com clareza."
   }
 }

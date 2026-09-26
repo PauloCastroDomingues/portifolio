@@ -56,8 +56,7 @@ export function Hero() {
         .to(".hero-title", { yPercent: -12, ease: "none" }, 0)
         .to(".hero-copy", { y: -54, autoAlpha: 0.15, ease: "none" }, 0)
         .to(".hero-media", { yPercent: 10, ease: "none" }, 0)
-        .to(".hero-media img", { yPercent: 8, scale: 1.16, ease: "none" }, 0)
-        .to(".hero-index", { yPercent: -90, ease: "none" }, 0);
+        .to(".hero-media img", { yPercent: 8, scale: 1.16, ease: "none" }, 0);
 
       const move = (event: PointerEvent) => {
         if (window.innerWidth < motionConfig.devices.pointerMin) return;
@@ -85,6 +84,7 @@ export function Hero() {
         <div className="hero-copy hero-reveal">
           <p className="eyebrow">{content.hero.eyebrow}</p>
           <p>{content.hero.intro}</p>
+          <p className="hero-availability"><span aria-hidden="true" />{content.identity.availability}</p>
           <div className="hero-actions">
             <a className="button button-dark" href={content.hero.primaryHref} target="_blank" rel="noreferrer">
               {content.hero.primaryCta}
@@ -114,17 +114,6 @@ export function Hero() {
             <span>{content.identity.company}</span>
           </figcaption>
         </figure>
-
-        <div className="hero-index hero-reveal" aria-hidden="true">
-          <span>01</span>
-          <span>/</span>
-          <span>TRÁFEGO PAGO</span>
-        </div>
-
-        <div className="hero-status hero-reveal">
-          <span className="status-pulse" aria-hidden="true" />
-          {content.identity.availability}
-        </div>
 
         <a className="hero-scroll hero-reveal" href="#principios" aria-label="Rolar para o conteúdo">
           <ArrowDown aria-hidden="true" size={18} />
