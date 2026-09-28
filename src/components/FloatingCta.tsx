@@ -8,10 +8,10 @@ export function FloatingCta() {
       href={content.contact.primaryHref}
       target="_blank"
       rel="noreferrer"
-      aria-label="Pedir diagnóstico gratuito pelo WhatsApp"
+      aria-label="Falar com Paulo pelo WhatsApp"
     >
-      <MessageCircle aria-hidden="true" size={20} />
-      <span>Pedir diagnóstico</span>
+      <MessageCircle aria-hidden="true" size={19} />
+      <span>Falar com Paulo</span>
     </a>
   );
 }

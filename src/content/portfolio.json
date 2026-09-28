@@ -1,228 +1,275 @@
 {
   "site": {
-    "title": "Paulo Castro Domingues | Gestão de Anúncios em Marketplaces",
-    "description": "Seu anúncio recebe visitas, mas as vendas estão paradas? Tenha um diagnóstico gratuito e uma gestão de campanhas orientada por dados no Mercado Livre, Shopee e Magalu.",
+    "title": "Paulo Castro | Marketplace Performance, Dados & Growth",
+    "description": "Diagnóstico e gestão de marketplace com leitura de campanhas, produtos, preço, estoque, margem e dados. Atendimento para Mercado Livre, Shopee e Magalu.",
     "url": "https://portifolio-gamma-seven-71.vercel.app/",
-    "themeColor": "#0b1017",
+    "themeColor": "#080b0d",
     "ogImage": "media/performance-dashboard.jpg"
+  },
+  "features": {
+    "cases": false
   },
   "identity": {
     "name": "Paulo Castro Domingues",
     "shortName": "Paulo Castro",
-    "role": "Gestão de tráfego pago para marketplaces",
-    "company": "Mercado Livre • Shopee • Magalu",
+    "role": "Especialista em E-commerce, Marketplace Performance & Growth",
+    "company": "Marketplace • Ads • Dados • Estratégia",
     "location": "Franca, SP",
-    "availability": "Diagnóstico gratuito • Sem contrato engessado"
+    "availability": "Diagnóstico de Performance • Gestão Estratégica"
   },
   "navigation": [
-    {
-      "id": "inicio",
-      "label": "Início"
-    },
-    {
-      "id": "experiencia",
-      "label": "Como funciona"
-    },
-    {
-      "id": "projetos",
-      "label": "Diagnóstico"
-    },
-    {
-      "id": "sobre",
-      "label": "Sobre"
-    },
-    {
-      "id": "contato",
-      "label": "Contato"
-    }
+    { "id": "inicio", "label": "Início" },
+    { "id": "visao", "label": "Visão" },
+    { "id": "solucoes", "label": "Soluções" },
+    { "id": "sobre", "label": "Sobre" },
+    { "id": "cases", "label": "Cases" },
+    { "id": "processo", "label": "Processo" },
+    { "id": "oferta", "label": "Oferta" },
+    { "id": "contato", "label": "Contato" }
   ],
   "hero": {
-    "eyebrow": "MERCADO LIVRE • SHOPEE • MAGALU",
-    "headline": "Seu anúncio pode vender bem mais.",
-    "titleLines": [
-      "Seu anúncio",
-      "pode vender",
-      "bem mais."
-    ],
-    "intro": "Poucas visitas ou vendas travadas? Analiso suas campanhas e mostro onde ajustar investimento, busca e posicionamento nos marketplaces.",
-    "primaryCta": "Pedir diagnóstico gratuito",
-    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
-    "secondaryCta": "Conhecer o processo",
+    "eyebrow": "PAULO CASTRO / MARKETPLACE E DADOS",
+    "headline": "Sua operação é maior que a campanha.",
+    "titleLines": ["Sua operação", "é maior que", "a campanha."],
+    "intro": "Cruzo mídia, produto, preço, estoque e margem para mostrar onde a operação perde eficiência e o que merece atenção primeiro.",
+    "primaryCta": "Quero analisar minha operação",
+    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%2C%20Paulo.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entender%20como%20funciona%20o%20diagn%C3%B3stico%20de%20Marketplace.",
+    "secondaryCta": "Ver cases",
     "media": "media/performance-dashboard.jpg",
-    "mediaAlt": "Painel de desempenho de campanhas em uma tela de notebook."
+    "mediaAlt": "Painel de desempenho de campanhas em uma tela de notebook.",
+    "signals": ["CAMPANHA", "PRODUTO", "MARGEM", "ESTOQUE"],
+    "systemSteps": ["COLETA", "ANÁLISE", "DECISÃO", "ACOMPANHAMENTO"],
+    "auditRows": [
+      { "signal": "Campanhas", "question": "Onde a verba perde eficiência?", "decision": "Cortar, redistribuir ou testar" },
+      { "signal": "Produtos", "question": "O que vende com margem e estoque?", "decision": "Definir prioridade por SKU" },
+      { "signal": "Operação", "question": "Preço e catálogo limitam a conversão?", "decision": "Corrigir antes de escalar" },
+      { "signal": "Indicadores", "question": "ACOS e ROAS respondem ao objetivo?", "decision": "Ler junto com margem e contexto" }
+    ]
   },
-  "principles": [
-    {
-      "title": "Expectativas alinhadas desde o início.",
-      "body": "A análise mostra oportunidades, gargalos e limites da conta antes de qualquer mudança no investimento.",
-      "label": "TRANSPARÊNCIA"
-    },
-    {
-      "title": "Seu investimento recebe acompanhamento.",
-      "body": "Orçamento, termos de busca e posicionamentos são revistos para orientar os próximos ajustes.",
-      "label": "GESTÃO"
-    },
-    {
-      "title": "Relatórios que ajudam a decidir.",
-      "body": "Visitas, conversão e vendas em uma leitura direta, junto com recomendações para o próximo ciclo.",
-      "label": "ANÁLISE"
-    }
-  ],
-  "story": {
-    "eyebrow": "Como funciona",
-    "title": "Da análise ao próximo ajuste, com clareza em cada etapa.",
-    "steps": [
+  "positioning": {
+    "eyebrow": "COMO EU LEIO A OPERAÇÃO",
+    "title": "O anúncio é só uma parte do resultado.",
+    "text": "Antes de aumentar a verba, eu verifico se produto, preço, estoque, margem e catálogo sustentam o crescimento.",
+    "inputs": [
+      { "label": "Produto", "detail": "Vende, converte e tem estoque?" },
+      { "label": "Mídia", "detail": "A verba segue margem e prioridade?" },
+      { "label": "Operação", "detail": "Preço e catálogo ajudam ou travam?" },
+      { "label": "Dados", "detail": "O indicador responde à pergunta certa?" }
+    ],
+    "output": "PRIORIDADE CLARA"
+  },
+  "problem": {
+    "eyebrow": "ONDE A EFICIÊNCIA SE PERDE",
+    "title": "Vender mais pode esconder uma operação pior.",
+    "text": "Receita, ROAS ou ACOS isolados não mostram margem, ruptura, dependência de mídia ou verba mal alocada. O diagnóstico conecta esses sinais antes de recomendar qualquer mudança.",
+    "items": [
+      "Verba concentrada sem critério de margem",
+      "Produto com venda, mas baixa rentabilidade",
+      "Campanha ativa sem objetivo definido",
+      "Ruptura de estoque nos SKUs prioritários",
+      "ACOS e ROAS sem contexto comercial",
+      "Decisão baseada apenas em volume de vendas"
+    ]
+  },
+  "solutions": {
+    "eyebrow": "O QUE VOCÊ RECEBE",
+    "title": "Um diagnóstico que termina em decisões claras.",
+    "items": [
       {
-        "id": "diagnostico",
-        "title": "Diagnóstico",
         "code": "01",
-        "label": "Entender o cenário",
-        "metric": "VISITAS / CONVERSÃO / POSIÇÃO",
-        "description": "Leitura da conta, dos anúncios e do contexto do produto para localizar oportunidades e gargalos.",
-        "signals": [
-          "Visitas e conversão",
-          "Posição e relevância do anúncio",
-          "Oportunidades e limites da conta"
-        ],
-        "result": "Um panorama claro do que está acontecendo e do que vale investigar."
+        "kicker": "LEITURA",
+        "title": "Mapa dos gargalos",
+        "description": "Uma leitura cruzada para separar problema de campanha, produto e operação.",
+        "deliverables": ["Campanhas e investimento", "Produtos e conversão", "Preço, estoque e margem"]
       },
       {
-        "id": "planejamento",
-        "title": "Planejamento",
         "code": "02",
-        "label": "Definir a direção",
-        "metric": "OBJETIVO / ORÇAMENTO / CANAL",
-        "description": "Escolha do objetivo, do canal e de um investimento inicial coerente com o produto e a operação.",
-        "signals": [
-          "Plataforma e posicionamentos",
-          "Orçamento inicial",
-          "Critérios para acompanhar a campanha"
-        ],
-        "result": "Um plano alinhado ao produto, ao canal e ao investimento disponível."
+        "kicker": "PRIORIDADE",
+        "title": "Ordem de ação",
+        "description": "Os pontos encontrados são organizados por impacto, urgência e capacidade de execução.",
+        "deliverables": ["O que corrigir agora", "O que acompanhar", "O que não priorizar"]
       },
       {
-        "id": "gestao",
-        "title": "Acompanhamento",
         "code": "03",
-        "label": "Observar e ajustar",
-        "metric": "REVISÃO / AJUSTE / COMUNICAÇÃO",
-        "description": "Revisões periódicas dos anúncios e ajustes orientados pelo desempenho observado.",
-        "signals": [
-          "Revisão de campanhas e termos",
-          "Ajustes de orçamento e posicionamento",
-          "Comunicação clara sobre as mudanças"
-        ],
-        "result": "Você entende o que foi ajustado e por que cada decisão foi tomada."
+        "kicker": "TESTE",
+        "title": "Próximos movimentos",
+        "description": "Cada recomendação vem ligada a uma hipótese, uma ação e um sinal para acompanhar.",
+        "deliverables": ["Ajustes de verba", "Produtos prioritários", "Testes e critérios de leitura"]
       },
       {
-        "id": "aprendizado",
-        "title": "Aprendizado",
         "code": "04",
-        "label": "Escolher o próximo passo",
-        "metric": "DADOS / APRENDIZADO / PRÓXIMA AÇÃO",
-        "description": "Leitura do ciclo para identificar o que os dados indicam e qual teste ou ajuste vem a seguir.",
-        "signals": [
-          "Resumo dos indicadores acompanhados",
-          "Comparação com o objetivo definido",
-          "Recomendação para o próximo ciclo"
-        ],
-        "result": "Um próximo passo explicado com base no cenário da sua conta."
+        "kicker": "DEVOLUTIVA",
+        "title": "Leitura executiva",
+        "description": "Você recebe a análise organizada, com contexto suficiente para entender e decidir.",
+        "deliverables": ["Relatório objetivo", "Reunião de apresentação", "Plano de ação priorizado"]
       }
     ]
   },
-  "visualStory": {
-    "wideEyebrow": "O que os dados ajudam a responder",
-    "wideTitle": "Atenção, visita e pedido: cada etapa conta.",
-    "wideMedia": "media/campaign-dashboard.jpg",
-    "wideAlt": "Painel de campanhas digitais apresentado em uma tela de computador.",
-    "splitEyebrow": "Acompanhamento de campanhas",
-    "splitTitle": "O investimento precisa de contexto, não de adivinhação.",
-    "largeMedia": "media/performance-review.jpg",
-    "largeAlt": "Notebook aberto em um painel de análise de desempenho.",
-    "smallMedia": "media/performance-report.jpg",
-    "smallAlt": "Relatório com gráficos de acompanhamento e anotações.",
-    "splitSupport": "Visitas, cliques, conversão e investimento ajudam a decidir o que manter, ajustar ou testar.",
-    "performanceNote": "Imagens de painéis são ilustrativas. Nenhum dado exibido representa resultado de cliente."
+  "differential": {
+    "eyebrow": "CRITÉRIO DE ANÁLISE",
+    "title": "A recomendação precisa caber na operação.",
+    "text": "Não adianta sugerir mais investimento quando preço, estoque, catálogo ou margem impedem o resultado. A análise considera o que pode ser executado de verdade.",
+    "center": "DECISÃO",
+    "nodes": ["Campanhas", "Catálogo", "Conversão", "Preço", "Estoque", "Margem", "Investimento", "Prioridade"],
+    "credential": "Formação em Análise e Desenvolvimento de Sistemas e experiência prática com mídia, catálogo, estoque e leitura de performance em Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo."
   },
-  "capabilities": {
-    "eyebrow": "Canais de atuação",
-    "title": "A estratégia muda conforme o canal, o produto e o objetivo.",
-    "items": [
-      {
-        "title": "Mercado Livre Ads",
-        "kicker": "01",
-        "media": "media/performance-dashboard.jpg",
-        "description": "Gestão de campanhas e posicionamentos alinhados à busca e à dinâmica dos anúncios no Mercado Livre."
-      },
-      {
-        "title": "Shopee Ads",
-        "kicker": "02",
-        "media": "media/performance-review.jpg",
-        "description": "Ajustes de campanha para aproximar seus produtos das pessoas com maior intenção de compra."
-      },
-      {
-        "title": "Magalu Ads",
-        "kicker": "03",
-        "media": "media/performance-report.jpg",
-        "description": "Estrutura de anúncios orientada ao catálogo, ao público e ao orçamento disponível."
-      },
-      {
-        "title": "Meta Ads",
-        "kicker": "04",
-        "media": "media/campaign-dashboard.jpg",
-        "description": "Campanhas complementares para atrair público e apoiar a jornada de compra, quando fizer sentido."
-      }
-    ]
+  "casesSection": {
+    "eyebrow": "ESTUDOS DE PERFORMANCE",
+    "title": "Cases precisam mostrar raciocínio, não só um antes e depois.",
+    "intro": "A estrutura abaixo está pronta para receber dados reais. Nenhum resultado foi inventado para preencher o layout.",
+    "emptyNote": "Os números e nomes de operação permanecem como placeholders até serem substituídos por informações reais e autorizadas."
   },
-  "projectsSection": {
-    "eyebrow": "O que você recebe",
-    "title": "Um diagnóstico para transformar números em próximo passo."
-  },
-  "projects": [
+  "cases": [
     {
-      "title": "Leitura inicial da campanha",
-      "category": "Exemplo de entrega",
-      "media": "media/campaign-dashboard.jpg",
-      "alt": "Painel ilustrativo para explicar a análise de uma campanha, sem dados reais de cliente.",
-      "summary": "O diagnóstico organiza visitas, cliques, conversão e investimento, e termina com recomendações práticas. A análise considera os dados e o contexto da sua operação; não números inventados.",
-      "tags": [
-        "Visitas e cliques",
-        "Conversão",
-        "Investimento",
-        "Próximas ações"
-      ],
-      "href": "#experiencia",
-      "cta": "Ver como funciona"
+      "code": "CASE 01",
+      "title": "[INSERIR NOME DA OPERAÇÃO / MARKETPLACE]",
+      "context": "[INSERIR CONTEXTO REAL]",
+      "problem": "[INSERIR GARGALO REAL]",
+      "analysis": "[INSERIR O QUE OS DADOS MOSTRARAM]",
+      "action": "[INSERIR AÇÃO EXECUTADA]",
+      "results": [
+        { "value": "[MÉTRICA]", "label": "Resultado real" },
+        { "value": "[MÉTRICA]", "label": "Eficiência real" },
+        { "value": "[MÉTRICA]", "label": "Evolução real" }
+      ]
     }
   ],
-  "metrics": {
-    "number": "04",
-    "label": "sinais que ajudam a orientar cada decisão",
+  "process": {
+    "eyebrow": "COMO O TRABALHO ACONTECE",
+    "title": "Um diagnóstico com começo, entrega e próximo passo.",
+    "steps": [
+      { "code": "01", "title": "Alinhamento", "text": "Entendo o canal, o objetivo, as restrições e as dúvidas da operação." },
+      { "code": "02", "title": "Coleta e leitura", "text": "Cruzo campanhas, produtos, investimento e indicadores disponíveis." },
+      { "code": "03", "title": "Prioridades", "text": "Organizo os gargalos por impacto, urgência e capacidade de execução." },
+      { "code": "04", "title": "Devolutiva", "text": "Apresento o diagnóstico, os critérios usados e o plano de ação." },
+      { "code": "05", "title": "Continuidade", "text": "A implementação e o acompanhamento podem ser contratados separadamente." }
+    ]
+  },
+  "offers": {
+    "eyebrow": "FORMATOS DE TRABALHO",
+    "title": "Clareza pontual ou acompanhamento contínuo.",
+    "flow": ["ENTENDER", "DECIDIR", "EXECUTAR", "OTIMIZAR"],
+    "diagnostic": {
+      "badge": "PORTA DE ENTRADA",
+      "title": "Diagnóstico de Performance",
+      "description": "Uma leitura independente para entender os principais gargalos e sair com uma ordem clara de ação.",
+      "pricePrefix": "A partir de",
+      "price": "R$290",
+      "items": ["Campanhas e investimento", "Produtos e conversão", "Preço, estoque e margem", "Mapa de gargalos", "Prioridades e plano de ação", "Relatório + reunião de devolutiva"],
+      "cta": "Solicitar diagnóstico",
+      "href": "https://wa.me/5516991485154?text=Ol%C3%A1%2C%20Paulo.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entender%20como%20funciona%20o%20diagn%C3%B3stico%20de%20Marketplace."
+    },
+    "management": {
+      "badge": "CONTINUIDADE",
+      "title": "Gestão Estratégica de Marketplace",
+      "description": "Para operações que precisam acompanhar campanhas, executar ajustes e revisar prioridades ao longo do mês.",
+      "pricePrefix": "A partir de",
+      "price": "R$1.500/mês",
+      "items": ["Acompanhamento de campanhas", "Revisão de investimento", "Leitura de ACOS e ROAS", "Priorização de produtos", "Recomendações de operação", "Ciclos periódicos de decisão"],
+      "cta": "Quero conversar sobre minha operação",
+      "href": "https://wa.me/5516991485154?text=Ol%C3%A1%2C%20Paulo.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20a%20gest%C3%A3o%20estrat%C3%A9gica%20da%20minha%20opera%C3%A7%C3%A3o."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Antes de analisar a operação, alinhamos o escopo.",
     "items": [
-      "Visitas e cliques: o anúncio está atraindo atenção?",
-      "Conversão: as visitas avançam para pedidos?",
-      "Investimento: o orçamento está coerente com o objetivo?",
-      "Próxima ação: o que manter, ajustar ou testar?"
+      { "question": "Quais marketplaces você atende?", "answer": "O escopo apresentado atualmente cobre Mercado Livre, Shopee e Magalu. Outros canais podem ser avaliados conforme a operação e a necessidade." },
+      { "question": "Preciso fornecer acesso à minha conta?", "answer": "O formato de acesso depende da plataforma e do nível de análise. Quando possível, o diagnóstico pode começar por relatórios e exportações; acessos adicionais são combinados de forma objetiva quando forem necessários." },
+      { "question": "O diagnóstico garante aumento nas vendas?", "answer": "Não. O diagnóstico identifica gargalos, desperdícios e oportunidades com base nos dados disponíveis. Resultado comercial depende também de produto, preço, estoque, margem, concorrência e execução." },
+      { "question": "Posso contratar somente o diagnóstico?", "answer": "Sim. O diagnóstico funciona como uma entrega independente e pode ser contratado sem continuidade mensal." },
+      { "question": "O diagnóstico inclui implementação?", "answer": "A entrega do diagnóstico é focada em análise, prioridades, relatório e devolutiva. Implementação é definida separadamente conforme o escopo ou dentro da gestão mensal." },
+      { "question": "Como funciona a gestão mensal?", "answer": "A gestão transforma o diagnóstico em rotina: acompanhamento de campanhas, leitura de indicadores, otimizações, recomendações e ciclos periódicos de decisão." },
+      { "question": "Para qual tipo de seller o serviço é indicado?", "answer": "Para operações que já vendem em marketplace e precisam ganhar clareza sobre investimento, eficiência, priorização de produtos e próximos movimentos de crescimento." }
     ]
   },
   "contact": {
-    "eyebrow": "Próximo passo",
-    "title": "Seu anúncio pode vender mais. Vamos descobrir o que está travando?",
-    "primaryLabel": "Pedir diagnóstico gratuito",
-    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios.",
+    "eyebrow": "PRÓXIMO PASSO",
+    "title": "Quer uma leitura objetiva da sua operação?",
+    "subtitle": "Conte o que você vende, em qual canal e qual dúvida precisa responder primeiro.",
+    "primaryLabel": "Falar com Paulo",
+    "primaryHref": "https://wa.me/5516991485154?text=Ol%C3%A1%2C%20Paulo.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entender%20como%20funciona%20o%20diagn%C3%B3stico%20de%20Marketplace.",
     "secondaryLabel": "Voltar ao início",
     "secondaryHref": "#inicio"
   },
   "footer": {
-    "signature": "Paulo Castro Domingues",
-    "note": "Gestão de tráfego pago para marketplaces.",
-    "sourceLabel": "Falar no WhatsApp",
-    "sourceHref": "https://wa.me/5516991485154?text=Ol%C3%A1%20Paulo%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20gratuito%20dos%20meus%20an%C3%BAncios."
+    "signature": "Paulo Castro",
+    "note": "E-commerce • Marketplace • Performance • Growth",
+    "sourceLabel": "WhatsApp",
+    "sourceHref": "https://wa.me/5516991485154?text=Ol%C3%A1%2C%20Paulo.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entender%20como%20funciona%20o%20diagn%C3%B3stico%20de%20Marketplace."
   },
   "about": {
-    "title": "Quem vai cuidar dos seus anúncios",
+    "eyebrow": "SOBRE MIM",
+    "title": "Experiência entre operação, mídia e dados",
     "media": "media/paulo-profile.jpg",
-    "mediaAlt": "Paulo Castro Domingues, gestor de tráfego para marketplaces.",
-    "text": "Sou Paulo, formado em Análise e Desenvolvimento de Sistemas. Hoje atuo com dados e mídia paga na Reise. Também passei pela operação de vendedores em Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo, cuidando de campanhas, catálogo e estoque. Uno essa vivência prática à análise de dados para te mostrar, com números, onde seu anúncio está travando."
+    "mediaAlt": "Paulo Castro Domingues.",
+    "text": "Sou formado em Análise e Desenvolvimento de Sistemas e construí minha experiência entre operação de marketplace, mídia paga e análise de dados. Já trabalhei com Mercado Livre, Shopee, Magalu, TikTok Shop e Via Varejo, acompanhando campanhas, catálogo, estoque e desempenho comercial. Esse repertório me ajuda a investigar o que está por trás de cada indicador e transformar a análise em prioridades que a operação consegue executar.",
+    "skillsTitle": "O repertório que levo para cada diagnóstico.",
+    "skills": [
+      { "code": "01", "title": "Operação de marketplace", "description": "Rotina de catálogo, estoque, preço e acompanhamento de produtos." },
+      { "code": "02", "title": "Mídia de performance", "description": "Campanhas, investimento, ACOS, ROAS e conversão." },
+      { "code": "03", "title": "Análise de dados", "description": "Dashboards, leitura de indicadores e investigação de gargalos." },
+      { "code": "04", "title": "Priorização comercial", "description": "Decisões orientadas por margem, potencial e capacidade de execução." }
+    ]
+  },
+  "principles": [
+    { "title": "Produto e mídia precisam conversar.", "body": "O anúncio não corrige sozinho preço, estoque, catálogo ou margem.", "label": "OPERAÇÃO" },
+    { "title": "Indicador sem contexto vira ruído.", "body": "ACOS, ROAS e conversão precisam ser lidos junto com objetivo e economics do produto.", "label": "DADOS" },
+    { "title": "A prioridade vem antes da otimização.", "body": "Nem todo ajuste merece o mesmo esforço ou o mesmo orçamento.", "label": "ESTRATÉGIA" }
+  ],
+  "story": {
+    "eyebrow": "Processo",
+    "title": "Da análise ao próximo ajuste.",
+    "steps": [
+      { "id": "coleta", "title": "Coleta", "code": "01", "label": "Entender o cenário", "metric": "DADOS / PRODUTO / MÍDIA", "description": "Organização dos sinais necessários para ler a operação.", "signals": ["Campanhas", "Produtos", "Investimento"], "result": "Uma base comum para a análise." },
+      { "id": "analise", "title": "Análise", "code": "02", "label": "Encontrar o gargalo", "metric": "EFICIÊNCIA / CONTEXTO", "description": "Conexão entre indicadores e contexto comercial.", "signals": ["ACOS", "ROAS", "Conversão"], "result": "Clareza sobre o que pede atenção." },
+      { "id": "decisao", "title": "Decisão", "code": "03", "label": "Definir prioridade", "metric": "PRIORIDADE / IMPACTO", "description": "Escolha das mudanças que fazem sentido primeiro.", "signals": ["Verba", "Produto", "Campanha"], "result": "Um plano de ação priorizado." },
+      { "id": "performance", "title": "Performance", "code": "04", "label": "Medir e ajustar", "metric": "EVOLUÇÃO / PRÓXIMO CICLO", "description": "Acompanhamento da resposta da operação às mudanças.", "signals": ["Evolução", "Aprendizado", "Próxima ação"], "result": "Um novo ciclo de decisão com mais contexto." }
+    ]
+  },
+  "visualStory": {
+    "wideEyebrow": "Dados conectados",
+    "wideTitle": "Da coleta à decisão.",
+    "wideMedia": "media/campaign-dashboard.jpg",
+    "wideAlt": "Painel de campanhas digitais em uma tela de computador.",
+    "splitEyebrow": "Análise",
+    "splitTitle": "Indicador precisa de contexto.",
+    "largeMedia": "media/performance-review.jpg",
+    "largeAlt": "Notebook aberto em painel de desempenho.",
+    "smallMedia": "media/performance-report.jpg",
+    "smallAlt": "Relatório de acompanhamento.",
+    "splitSupport": "A leitura combina mídia, produto e contexto comercial.",
+    "performanceNote": "Imagens de painéis são ilustrativas. Nenhum dado exibido representa resultado de cliente."
+  },
+  "capabilities": {
+    "eyebrow": "Canais",
+    "title": "O contexto muda conforme o canal.",
+    "items": [
+      { "title": "Mercado Livre Ads", "kicker": "01", "media": "media/performance-dashboard.jpg", "description": "Campanhas e posicionamentos lidos dentro da dinâmica do marketplace." },
+      { "title": "Shopee Ads", "kicker": "02", "media": "media/performance-review.jpg", "description": "Leitura de investimento, busca, produto e conversão." },
+      { "title": "Magalu Ads", "kicker": "03", "media": "media/performance-report.jpg", "description": "Estrutura de mídia conectada ao catálogo e ao objetivo." },
+      { "title": "Meta Ads", "kicker": "04", "media": "media/campaign-dashboard.jpg", "description": "Canal complementar quando fizer sentido para a jornada." }
+    ]
+  },
+  "projectsSection": {
+    "eyebrow": "Cases",
+    "title": "Estudos de performance com dados reais."
+  },
+  "projects": [
+    {
+      "title": "Estrutura de case pronta para dados reais",
+      "category": "Placeholder transparente",
+      "media": "media/campaign-dashboard.jpg",
+      "alt": "Painel ilustrativo de campanhas, sem dados reais de cliente.",
+      "summary": "O layout está preparado para contexto, problema, análise, ação e resultado. Os números permanecem em placeholder até serem substituídos por dados reais.",
+      "tags": ["Contexto", "Problema", "Análise", "Ação", "Resultado"],
+      "href": "#cases",
+      "cta": "Ver estrutura"
+    }
+  ],
+  "metrics": {
+    "number": "04",
+    "label": "dimensões conectadas",
+    "items": ["Produto", "Investimento", "Dados", "Estratégia"]
   }
 }

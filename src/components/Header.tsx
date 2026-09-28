@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowDownRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { content, navItems } from "../data/content";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useMotion } from "../motion/useMotion";
@@ -15,14 +15,12 @@ export function Header() {
 
   useEffect(() => {
     setSection(active);
-    if (active === "inicio") setStep("abertura");
-    else if (active === "projetos") setStep("projetos");
-    else if (active === "contato") setStep("fechamento");
+    setStep(active === "inicio" ? "coleta" : active === "visao" ? "analise" : active === "oferta" ? "decisao" : active === "contato" ? "acao" : active);
   }, [active, setSection, setStep]);
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 36);
+      setScrolled(window.scrollY > 24);
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
       progressRef.current?.style.setProperty("--scroll-progress", `${progress}`);
@@ -43,6 +41,7 @@ export function Header() {
       if (event.key === "Escape") {
         setOpen(false);
         buttonRef.current?.focus();
+        return;
       }
       if (event.key !== "Tab" || !focusable?.length) return;
       const first = focusable[0];
@@ -75,16 +74,20 @@ export function Header() {
     <>
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <a className="brand" href="#inicio" aria-label={`${content.identity.name}, ir ao início`}>
-          <span>PC</span>
-          {content.identity.shortName}
+          <span className="brand-mark" aria-hidden="true">PC</span>
+          <span className="brand-copy">
+            <strong>{content.identity.shortName}</strong>
+            <small>Performance / Marketplace</small>
+          </span>
         </a>
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          {nav}
-        </nav>
+
+        <nav className="desktop-nav" aria-label="Navegação principal">{nav}</nav>
+
         <a className="header-cta" href={content.contact.primaryHref} target="_blank" rel="noreferrer">
-          {content.contact.primaryLabel}
-          <ArrowDownRight aria-hidden="true" size={17} />
+          Analisar operação
+          <ArrowUpRight aria-hidden="true" size={15} />
         </a>
+
         <button
           ref={buttonRef}
           className="menu-toggle"
@@ -104,24 +107,18 @@ export function Header() {
         id="mobile-menu"
         ref={panelRef}
         aria-hidden={!open}
+        inert={!open}
       >
+        <div className="mobile-menu-head">
+          <span>Paulo Castro</span>
+          <small>Marketplace Performance</small>
+        </div>
         <nav aria-label="Navegação móvel">{nav}</nav>
-        <a className="header-cta" href={content.contact.primaryHref} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-          {content.contact.primaryLabel}
-          <ArrowDownRight aria-hidden="true" size={17} />
+        <a className="button button-accent" href={content.contact.primaryHref} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+          Falar sobre minha operação
+          <ArrowUpRight aria-hidden="true" size={17} />
         </a>
       </div>
-
-      <nav className="side-dots" aria-label="Navegação por seções">
-        {navItems.map((item) => (
-          <a
-            className={active === item.id ? "is-active" : ""}
-            href={`#${item.id}`}
-            key={item.id}
-            aria-label={`Ir para ${item.label}`}
-          />
-        ))}
-      </nav>
     </>
   );
 }

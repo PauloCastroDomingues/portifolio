@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { ArrowDown, ArrowDownRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { content, photos } from "../data/content";
+import { content } from "../data/content";
 import { motionConfig } from "../motion/config";
 import { useMotion } from "../motion/useMotion";
 
@@ -16,109 +15,98 @@ export function Hero() {
     () => {
       if (!enabled || !root.current) return;
 
-      const entrance = gsap.timeline({ defaults: { ease: motionConfig.ease.reveal } });
-      entrance
-        .fromTo(
-          ".hero-mask > span",
-          { yPercent: 115 },
-          { yPercent: 0, duration: 1.05, stagger: 0.1 },
-        )
-        .fromTo(
-          ".hero-media",
-          { clipPath: "inset(0 0 100% 0)" },
-          { clipPath: "inset(0 0 0% 0)", duration: 1.15 },
-          0.18,
-        )
-        .fromTo(
-          ".hero-media img",
-          { scale: 1.22 },
-          { scale: 1.08, duration: 1.45 },
-          0.18,
-        )
-        .fromTo(
-          ".hero-reveal",
-          { y: 24, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.08 },
-          0.42,
-        );
+      const intro = gsap.timeline({ defaults: { ease: motionConfig.ease.reveal } });
+      intro
+        .fromTo(".hero-kicker", { y: 16, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.55 })
+        .fromTo(".hero-title-line > span", { yPercent: 115 }, { yPercent: 0, duration: 0.9, stagger: 0.09 }, 0.08)
+        .fromTo(".hero-lead, .hero-actions, .hero-meta", { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.65, stagger: 0.08 }, 0.34)
+        .fromTo(".performance-console", { clipPath: "inset(0 0 100% 0)", autoAlpha: 0.5 }, { clipPath: "inset(0 0 0% 0)", autoAlpha: 1, duration: 1 }, 0.18)
+        .fromTo(".audit-row, .audit-note", { y: 14, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.55, stagger: 0.07 }, 0.55);
 
       const scroll = gsap.timeline({
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: "+=95%",
+          end: "+=90%",
           scrub: motionConfig.scroll.scrub,
           invalidateOnRefresh: true,
         },
       });
-
       scroll
-        .to(".hero-title", { yPercent: -12, ease: "none" }, 0)
-        .to(".hero-copy", { y: -54, autoAlpha: 0.15, ease: "none" }, 0)
-        .to(".hero-media", { yPercent: 10, ease: "none" }, 0)
-        .to(".hero-media img", { yPercent: 8, scale: 1.16, ease: "none" }, 0);
-
-      const move = (event: PointerEvent) => {
-        if (window.innerWidth < motionConfig.devices.pointerMin) return;
-        const x = (event.clientX / window.innerWidth - 0.5) * 18;
-        const y = (event.clientY / window.innerHeight - 0.5) * 14;
-        gsap.to(".hero-media", {
-          x,
-          y,
-          duration: 0.8,
-          overwrite: "auto",
-          ease: "power3.out",
-        });
-      };
-
-      window.addEventListener("pointermove", move, { passive: true });
-      ScrollTrigger.refresh();
-      return () => window.removeEventListener("pointermove", move);
+        .to(".hero-copy", { yPercent: -8, autoAlpha: 0.55, ease: "none" }, 0)
+        .to(".performance-console", { yPercent: 8, scale: 0.97, ease: "none" }, 0);
     },
     { scope: root, dependencies: [enabled], revertOnUpdate: true },
   );
 
   return (
     <section className="hero section" id="inicio" ref={root}>
-      <div className="hero-grid container">
-        <div className="hero-copy hero-reveal">
-          <p className="eyebrow">{content.hero.eyebrow}</p>
-          <p>{content.hero.intro}</p>
-          <p className="hero-availability"><span aria-hidden="true" />{content.identity.availability}</p>
+      <div className="hero-backdrop" aria-hidden="true" />
+      <div className="container hero-shell">
+        <div className="hero-copy">
+          <p className="eyebrow hero-kicker">{content.hero.eyebrow}</p>
+          <h1 className="hero-title" aria-label={content.hero.headline}>
+            {content.hero.titleLines.map((line, index) => (
+              <span className={`hero-title-line ${index === 2 ? "is-accent" : ""}`} key={line}>
+                <span>{line}</span>
+              </span>
+            ))}
+          </h1>
+          <p className="hero-lead">{content.hero.intro}</p>
           <div className="hero-actions">
-            <a className="button button-dark" href={content.hero.primaryHref} target="_blank" rel="noreferrer">
+            <a className="button button-accent" href={content.hero.primaryHref} target="_blank" rel="noreferrer">
               {content.hero.primaryCta}
-              <ArrowDownRight aria-hidden="true" size={18} />
+              <ArrowUpRight aria-hidden="true" size={18} />
             </a>
-            <a className="text-link" href="#experiencia">
-              {content.hero.secondaryCta}
-            </a>
+            {content.features.cases && (
+              <a className="button button-ghost" href="#cases">{content.hero.secondaryCta}</a>
+            )}
+          </div>
+          <div className="hero-meta">
+            <span>Marketplace</span>
+            <span>Performance</span>
+            <span>Dados</span>
+            <span>Estratégia comercial</span>
           </div>
         </div>
 
-        <h1
-          className="hero-title"
-          aria-label={content.hero.headline}
-        >
-          {content.hero.titleLines.map((line, index) => (
-            <span className={`hero-mask ${index === content.hero.titleLines.length - 1 ? "hero-mask-offset" : ""}`} key={line}>
-              <span>{line}</span>
-            </span>
-          ))}
-        </h1>
+        <div className="hero-visual" aria-label="Exemplo das perguntas e decisões de um diagnóstico de marketplace">
+          <div className="performance-console">
+            <div className="console-topbar">
+              <div>
+                <span className="status-dot" aria-hidden="true" />
+                <span>EXEMPLO DE LEITURA</span>
+              </div>
+              <span>DIAGNÓSTICO</span>
+            </div>
 
-        <figure className="hero-media">
-          <img src={photos.hero} alt={content.hero.mediaAlt} fetchPriority="high" />
-          <figcaption>
-            <span>{content.identity.location}</span>
-            <span>{content.identity.company}</span>
-          </figcaption>
-        </figure>
+            <div className="audit-table">
+              <div className="audit-table-head" aria-hidden="true">
+                <span>FRENTE</span>
+                <span>PERGUNTA</span>
+                <span>DECISÃO</span>
+              </div>
+              {content.hero.auditRows.map((row, index) => (
+                <div className="audit-row" key={row.signal}>
+                  <div className="audit-signal"><small>0{index + 1}</small><strong>{row.signal}</strong></div>
+                  <p>{row.question}</p>
+                  <span>{row.decision}</span>
+                </div>
+              ))}
+            </div>
 
-        <a className="hero-scroll hero-reveal" href="#principios" aria-label="Rolar para o conteúdo">
-          <ArrowDown aria-hidden="true" size={18} />
-        </a>
+            <div className="audit-note">
+              <span>SEM MÉTRICA ISOLADA</span>
+              <p>O próximo passo depende do contexto da operação, não de um número sozinho.</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <a className="hero-scroll" href="#visao" aria-label="Avançar para a visão de performance">
+        <span>SCROLL / NARRATIVE</span>
+        <ArrowDown aria-hidden="true" size={16} />
+      </a>
     </section>
   );
 }
